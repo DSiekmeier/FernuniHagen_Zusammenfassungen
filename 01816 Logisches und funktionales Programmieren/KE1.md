@@ -6,11 +6,11 @@ Prolog basiert auf der Prädikatenlogik 1. Ordnung, konkret der logischen Beschr
 ###1.2.1 Datentypen
 >"Ein Term ist entweder eine Konstante (Zahl oder Atom), eine Variable oder eine Struktur, deren Komponenten wieder Terme sind. Ein Term heißt *Grundterm* wenn er keine Variablen enthält."
 
-**Term**: allgemeine Form von Objekten. Oberbegriff für die restlichen Typen.
-**Konstante**: Oberbegriff für Zahl und Atom
-**Zahl**: Folge von Ziffern
-**Atom**: Zeichenfolge mit bestimmten Aufbau-Regeln
-**Variable**: beginnt mit Großbuchstaben
+**Term**: allgemeine Form von Objekten. Oberbegriff für die restlichen Typen. 
+**Konstante**: Oberbegriff für Zahl und Atom 
+**Zahl**: Folge von Ziffern 
+**Atom**: Zeichenfolge mit bestimmten Aufbau-Regeln 
+**Variable**: beginnt mit Großbuchstaben 
 **Struktur**: Objekt, zusammengesetzt aus anderen Objekten 
 
 ###1.2.2 Operatoren
@@ -18,6 +18,24 @@ Jeder Operator hat eine
 - **Position** (Präfix, Infix, Postfix)
 - **Assoziativität** (links- oder rechtsassoziativ)
 - **Präzedenz / Rangfolge** (Operator mit kl. Präzedenz bildet Unterstruktur)
+
+###1.2.3 Listen
+Im Gegensatz zu Strukturen sind bei Listen die Anzahl der Elemente im Voraus unbekannt. Eine Liste ist entweder
+
+1. eine leere Liste, dargestellt durch das Atom [ ]
+2. eine Struktur mit Funktor . und zwei Komponenten, wobei die zweite eine Liste ist
+
+Beispiele für Listen (mit *Listennotation*):
+
+- [ ] entspricht [ ]
+- .(x, [ ]) entspricht [x]
+- .(x, .(y, [ ])) entspricht [x, y]
+
+Listen können in Listenkopf und Listenrest unterteilt werden: [ a | [b, c] ]
+
+*Texte* entsprechen Folgen von Zeichen in Liste: [80, 114, 111, 108, 111, 103]
+
+###1.2.4 Fakten, Regeln und Anfragen
 
 ##1.3 Beweisstrategie
 
