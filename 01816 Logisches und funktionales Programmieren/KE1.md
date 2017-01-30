@@ -36,6 +36,22 @@ Listen können in Listenkopf und Listenrest unterteilt werden: [ a | [b, c] ]
 *Texte* entsprechen Folgen von Zeichen in Liste: [80, 114, 111, 108, 111, 103]
 
 ###1.2.4 Fakten, Regeln und Anfragen
+Darstellung von Wissen in Prolog in zwei Formen möglich:
+
+1. **Fakten**: Tatsachen über Eigenschaften von Objekten und deren Beziehungen
+2. **Regeln**, zum Ableiten neuer Tatsachen
+
+Fakten haben ein Atom als Namen: *eltern*(christine, heinz, angelika).
+
+Regeln haben die Form von "Wenn-Dann"-Aussagen: geschwister(K1, K2) :- eltern(M, V, K1),eltern(M, V, K2). Allgemein: L_0 :- L_1, ..., L_n. Die Aussagen haben dieselbe Form wie Fakten und werden darum zur Unterscheidung **Literale** genannt.
+
+>"Fakten können als Regeln ohne Voraussetzungen aufgefasst werden."
+
+Weitere **Begriffe**:
+
+1. Prädikat: Funktion die wahr / falsch als Wert liefert ( *weiblich*(anne). ) 
+2. Stelligkeit: Anzahl der anzugebenden Objekte
+3. Klauseln: allgemeiner Oberbegriff für Fakten und Regeln 
 
 ##1.3 Beweisstrategie
 
