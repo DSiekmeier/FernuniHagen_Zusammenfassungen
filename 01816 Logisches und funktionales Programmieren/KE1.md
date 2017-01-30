@@ -54,6 +54,21 @@ Weitere **Begriffe**:
 3. Klauseln: allgemeiner Oberbegriff für Fakten und Regeln 
 
 ##1.3 Beweisstrategie
+###1.3.1 Prinzip der Resolution
+Das **allgemeine Resolutionsprinzip** findet immer eine Lösung wenn sie existiert.
+
+**Modus ponens / Abtrennungsregel:**
+
+>"Wenn jedes der Literale L_1, ..., L_n beweisbar ist, und L_0 :- L_1, ..., L_n. eine Regel ist, dan ist auch das Literal L_0 beweisbar."
+
+**Resolutionsprinzip:**
+
+>"Ist L_0 :- L_1, ..., L_n. eine Regel, dann ist das Literal L_0 beweisbar, wenn jedes der Literale L_1, ..., L_n beweisbar ist."
+
+
+Die Aussage der beiden Regeln ist äquivalent, unterscheidet sich jedoch in der Sichtweise. Zunächst wird eine Regel gesucht, deren linke Seite mit dem Literal übereinstimmt und anschließend wird versucht die Regeln der rechten Seite zu beweisen.
+
+Das *allemeine Resolutionsprinzip* berücksichtigt zusätzlich das Ersetzen von Variablen sowie die Tatsache, dass in der Regel eine Menge von Literalen bewiesen werden muss.
 
 ##1.4 Programmiertechniken
 ###1.4.1 Programmieren mit Akkumulatoren
