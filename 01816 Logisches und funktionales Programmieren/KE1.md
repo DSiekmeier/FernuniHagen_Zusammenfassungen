@@ -70,6 +70,20 @@ Die Aussage der beiden Regeln ist äquivalent, unterscheidet sich jedoch in der 
 
 Das *allemeine Resolutionsprinzip* berücksichtigt zusätzlich das Ersetzen von Variablen sowie die Tatsache, dass in der Regel eine Menge von Literalen bewiesen werden muss.
 
+###1.3.2 Unifikation
+**Unifikation** ist der Prozess des Ersetzens von Variablen in einem Resolutionsschritt. Gleiche Variablen werden immer durch gleiche Terme ersetzt. Jede Substitution ändert nur eine Variable. Schreibweise \sigma = {N/meier, A/55}
+
+Aus dem **allgemeinsten Unifikator** ist jeder andere Unifikator ableitbar. Es ist wichtig den allgemeinsten Unifikator nicht zu speziell zu wählen um beim allgemeinen Resolutionsprinzip nicht in eine Sackgasse zu laufen.
+
+**Algorithmus zur Unifikation**
+siehe Skript (fünf Fälle)
+
+Werden zwei Strukturen miteinander unifiziert, werden die Komponenten paarweise unifiziert.
+
+In der Praxis verzichten viele Prolog-Systeme aus Effizientgründen auf den **Vorkommenstest**.
+
+###1.3.3 Backtracking
+
 ##1.4 Programmiertechniken
 ###1.4.1 Programmieren mit Akkumulatoren
 Formulierung rekursiver Prädikate die auf rekursive Termstrukturen arbeiten, in der Art, dass die zu bearbeitende Termstruktur kleiner wird und die Ergebnismenge wächst. Das Problem ist gelöst, wenn die  Ausgangsstruktur vollständig abgebaut ist.
