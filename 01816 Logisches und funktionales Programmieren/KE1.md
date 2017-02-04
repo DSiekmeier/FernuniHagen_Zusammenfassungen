@@ -83,6 +83,16 @@ Werden zwei Strukturen miteinander unifiziert, werden die Komponenten paarweise 
 In der Praxis verzichten viele Prolog-Systeme aus Effizientgründen auf den **Vorkommenstest**.
 
 ###1.3.3 Backtracking
+Zu klärende Fragen sind
+
+1. Welches Literal der Anfrage wird im nächsten Beweisschritt genutzt? (Immer in der Reihenfolge in der sie aufgeschrieben wurden, also meist von links nach rechts. Ausnahme sind parallel arbeitende Implementierungen die jedoch nicht weit verbreitet sind.)
+2. Welche der (ggfls. mehreren) passenden Klauseln wird im nächsten Beweisschritt genutzt? (Die Klauseln werden in der Reihenfolge wie sie hinterlegt wurden überprüft. Passen mehrere Klauseln wird das Backtracking-Verfahren angewendet.)
+
+Beim **Backtracking** wird die erste zu beweisende Klausel ausgewählt und die Variablen gegebenenfalls durch die Unifikation an einen anderen Term gebunden und versucht den Beweis fortzuführen. Gelangt das Verfahren in eine Sackgasse, so werden die letzten Schritte rückgängig gemacht und Alternativen ausprobiert. Ist dies erfolglos, meldet das System *no*. Bei mehreren möglichen Antworten kann die Ausgabe weiterer Antworten mit *;* erzwungen werden.
+
+Rein logisch ist die Reihenfolge der Klauseln egal. Da die Beweisstrategie (durch das Backtracking) jedoch nicht parallel arbeitet, kann es vorkommen, dass trotz existierender Lösung eine Endlosschleife auftritt. Daher die **Faustformel**:
+
+>Wenn für ein Prädikat mehrere Klauseln existieren, sollten die Spezialfälle *vor* den allgemeinen Fällen stehen.
 
 ##1.4 Programmiertechniken
 ###1.4.1 Programmieren mit Akkumulatoren
