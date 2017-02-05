@@ -1,4 +1,29 @@
-## Nichtlogische Komponenten von Prolog
+## 1.5 Nichtlogische Komponenten von Prolog
 Darunter werden Eigenschaften von Prolog verstanden, die von der Prädikatenlogik abweichen beziehungsweise damit nicht beschreibbar sind.
 
 Beispiele: Backtracking, Arithmetik, Ein- /Ausgabefunktionen, Cut-Operator, Negationen, ...
+
+### 1.5.1 Suchraum eingrenzen mit "cut"-Operator !
+Jeder Beweisschritt erzeugt einen Backtracking-Punkt auf dem Stack. Dies kann den Stack unter Umständen zum Überlaufen bringen. Mit dem Cut-Operator "!" kann der Bereich in dem nach Lösungen gesucht wird herausgeschnitten werden.
+
+Der Programmierer ist dafür verantwortlich, dass nicht der Teil mit der potentiellen Lösung entfernt wird.
+
+Der Operator steht anstelle eines Literals in der Anfrage oder auf der rechten Seite von Regeln. Rein logisch ist er **immer beweisbar**, beeinflusst jedoch das Verhalten des Backtrackingalgorithmus.
+
+Gründe für die Anwendung des Cut-Operators:
+
+1. Programmierer weiß bereits, dass bestimmte Alternativen in eine Sackgasse führen.  
+2. Ein bestimmtes zu beweisendes Prädikat hat nur eine Lösung.  
+3. Verhinderung von Laufzeitfehlern.  
+
+**Beispiel** für die Anwendung:
+
+> p :- q, !, r
+
+Zunächst wird immer versucht *q* zu beweisen:
+
+1. **q kann nicht bewiesen werden:** Es wird versucht die nächste Klausel ausprobiert (*r*). Der Cut-Operator hat keine Wirkung.
+
+2. **q kann bewiesen werden:** *p* ist in diesem Fall nur beweisbar, wenn *r* beweisbar ist. Es wird die Variablenbindung von *q* genutzt. Fehlt das Beweisen von *r* fehl, wird keine Alternative geprüft.
+
+> Alle alternative Beweismöglichkeiten für *p* die vor dem ! noch vorhanden waren werden abgeschnitten.
