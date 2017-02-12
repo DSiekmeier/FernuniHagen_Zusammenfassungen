@@ -33,3 +33,7 @@ In  Prolog existiert das einstellige Prädikat "not" **\\+**, welches als Präfi
 
 Die in Prolog verwendete Negation stimmt nicht mit der zugundeliegenden Logik überein. An einer Lösung wird gearbeitet. Die Idee ist es Negationen solange zu verzögern, bis alle vorkommenden Variablen gebunden sind.
 
+###1.5.3 Zyklische Terme
+Bei der Unifikation muss geprüft werden ob eine Variable als Variable im anderen Term vorkommt (**Vorkommenstest**). Aus Performancegründen wird hierauf oft verzichtet.
+
+Die Bindung einer Variablen an einen Term wird häufig ein Zeiger realisiert der auf den Term zeigt. Ohne Vorkommenstest kann dies dazu führen, dass die Variable X auf einen zyklischen Term zeigt und es können Endlosschleifen entstehen.
