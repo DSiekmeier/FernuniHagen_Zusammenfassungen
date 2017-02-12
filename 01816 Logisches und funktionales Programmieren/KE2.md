@@ -27,3 +27,9 @@ Zunächst wird immer versucht *q* zu beweisen:
 2. **q kann bewiesen werden:** *p* ist in diesem Fall nur beweisbar, wenn *r* beweisbar ist. Es wird die Variablenbindung von *q* genutzt. Fehlt das Beweisen von *r* fehl, wird keine Alternative geprüft.
 
 > Alle alternative Beweismöglichkeiten für *p* die vor dem ! noch vorhanden waren werden abgeschnitten.
+
+### 1.5.2 Negation
+In  Prolog existiert das einstellige Prädikat "not" **\\+**, welches als Präfixoperator definiert ist. Bei dem Literal **\\+ X** wird zunächst versucht **X** zu beweisen. Ist dies beweisbar, ist **\\+ X** nicht beweisbar, anderfalls ist **\\+ X** beweisbar.
+
+Die in Prolog verwendete Negation stimmt nicht mit der zugundeliegenden Logik überein. An einer Lösung wird gearbeitet. Die Idee ist es Negationen solange zu verzögern, bis alle vorkommenden Variablen gebunden sind.
+
