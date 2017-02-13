@@ -37,3 +37,26 @@ Die in Prolog verwendete Negation stimmt nicht mit der zugundeliegenden Logik ü
 Bei der Unifikation muss geprüft werden ob eine Variable als Variable im anderen Term vorkommt (**Vorkommenstest**). Aus Performancegründen wird hierauf oft verzichtet.
 
 Die Bindung einer Variablen an einen Term wird häufig ein Zeiger realisiert der auf den Term zeigt. Ohne Vorkommenstest kann dies dazu führen, dass die Variable X auf einen zyklischen Term zeigt und es können Endlosschleifen entstehen.
+
+###1.5.4 Arithmetik
+Prolog bietet das zweistellige Infixprädikat **is**. X is Y ist beweisbar, wenn Y ein vollständig instantiierter arithmetischer Term ist und mit X unifizierbar. *2 + 3 is 2 + 3* ist  nicht unifizierbar, da zunächst das zweite Argument ausgerechnet wird und *2 + 3* nicht mit *5* unifizierbar ist.
+
+Gründe, warum **is** nicht rein logisch ist:
+
+1. partielles Prädikat, das heißt nicht jeder Term darf verwendet werden (zweites Argument muss vollständig instantiiert sein
+
+2. Reihenfolge der Literale ist zu beachten
+
+Prädikate, die **Vergleichen arithmetischer Werte**:
+
+1. X =:= Y
+
+2. X =\= Y
+
+3. X < Y
+
+4. X > Y
+
+5. X >= Y
+
+6. X =< Y
