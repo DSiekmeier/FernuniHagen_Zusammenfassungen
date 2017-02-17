@@ -60,3 +60,13 @@ Prädikate, die **Vergleichen arithmetischer Werte**:
 5. X >= Y
 
 6. X =< Y
+
+### 1.5.5 Ein- und Ausgabe
+Ausnutzen von **Seiteneffekten**, also Operationen, die beim Beweisen "nebenbei" erfolgen und beim Backtracking nicht rückgängig gemacht werden.
+
+**Eingabe von Daten** mit dem Prädikat *read* und in der Regel einer ungebundenen Variable. Beispiel: *read(X).* Die Eingabe muss ein gültiger Term sein (also auch mit einem Punkt abgeschlossen werden).
+
+**Ausgabe von Daten** mit dem einstelligen Prädikat *write*. Dieses Prädikat ist genau einmal beweisbar. Seiteneffekt ist die Ausgabe des angegebenen Terms. Bei Ausgabe von Termen kann *writeq* genutzt werden, da dieses Prädikat die Anfürungszeichen nicht weglässt.
+
+### Definieren eigener Operatoren
+TO BE DONE
