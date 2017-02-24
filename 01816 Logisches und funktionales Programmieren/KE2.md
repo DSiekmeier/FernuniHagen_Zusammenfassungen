@@ -70,3 +70,38 @@ Ausnutzen von **Seiteneffekten**, also Operationen, die beim Beweisen "nebenbei"
 
 ### Definieren eigener Operatoren
 TO BE DONE
+
+### 1.5.6 Dateien
+Es gibt während eines Beweises immer genau eine Eingabe- und eine Ausgabedatei. Prädikate zur Eingabe lesen immer von der aktuellen Eingabedatei und Prädikate zur Ausgabe schreiben immer in die aktuelle Ausgabedatei.
+
+Standardmäßig ist die aktuelle Eingabedatei die Tastatur, die aktuelle Ausgabedatei der Bildschirm. Der Dateiname **user** bezeichnet immer die Standardeingabe / -ausgabe.
+
+**Prädikate für die Eingabe:** see(D), seeing(D), seen(D)
+
+**Prädikate für die Ausgabe:** tell(D), telling(D), told(D)
+
+**weitere Prädikate:** consult(D), reconsult(D), [D1, ..., Dn]
+
+### 1.5.7 beliebige Termstrukturen
+In den bisherigen Beispielen funktionierten Prädikate nur mit einer bestimmten Klasse von Termen (z.B. Listen), da die Klauseln explizit auf die Funktoren Bezug nahmen.
+
+**Wichtigstes Prädikat** für die Arbeit mit beliebigen Termstrukturen ist *=..*
+
+Es können Terme *zerlegt* werden, wenn das erste Argument mit diesen Termen instatiiert ist. Es können neue Terme *zusammengesetzt* werden, wenn das zweite Argument eine Liste mit dem Funktor und den Strukturkomponenten ist.
+
+**functor(T, F, N)** wirkt wie =.. beachtet jedoch die Komponenten des Terms nicht
+
+**arg(N, T, A)** dient dem Zugriff auf bestimmte Komponenten einer Struktur
+
+**name(A, L)** zerlegt ein Atom in eine Liste seiner Buchstaben (als ASCII-Code)
+
+**var(X)** ist beweisbar wenn X eine nicht instantiierte Variable ist
+
+**nonvar(X)** Gegenteil von *var(X)*
+
+**atom(X)** beweisbar wenn X ein Atom ist
+
+**integer(X)** beweisbar wenn X mit einer ganzen Zahl instantiiert ist
+
+**atomic(X)** Vereinigung von *atom(X)* und *integer(X)*
+
