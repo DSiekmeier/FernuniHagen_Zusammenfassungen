@@ -105,3 +105,19 @@ Es können Terme *zerlegt* werden, wenn das erste Argument mit diesen Termen ins
 
 **atomic(X)** Vereinigung von *atom(X)* und *integer(X)*
 
+### 1.5.8 Erweiterte Anfragen
+**call(X)** interpretiert beliebige Terme als Anfragen, es können nun Variablen für beliebige Terme stehen --> *Prädikatenlogik 2. Stufe* (Quantifizierung über Prädikate)
+
+**true** ist immer genau einmal beweisbar
+
+**fail** ist nie beweisbar
+
+**\+X** ist beweisbar wenn *X* nicht beweisbar ist
+
+**!** *cut*-Operator beeinflusst Backtracking-Verhalten
+
+**repeat** ist beliebig oft beweisbar, beispielsweise zum Einlesen von Dateien
+
+**X, Y** ist beweisbar wenn X *und* Y beweisbar sind --> logische UND-Verknüpfung
+
+**X; Y** ist beweisbar wenn X *oder* Y beweisbar sind --> logische ODER-Verknüpfung
