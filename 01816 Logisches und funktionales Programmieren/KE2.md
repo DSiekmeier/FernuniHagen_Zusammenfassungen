@@ -121,3 +121,34 @@ Es können Terme *zerlegt* werden, wenn das erste Argument mit diesen Termen ins
 **X, Y** ist beweisbar wenn X *und* Y beweisbar sind --> logische UND-Verknüpfung
 
 **X; Y** ist beweisbar wenn X *oder* Y beweisbar sind --> logische ODER-Verknüpfung
+
+### 1.5.9 Veränderung der Datenbank
+Syntaktische Struktur von Daten (Termen) und Programmen (Literalen, Klauseln) ist äquivalent. Daten Können als Programme intepretiert werden (mit *call*) und Programme als Daten. Oberbegriff *Datenbankprädikate* (wirken über Seiteneffekte).
+
+**asserta/1:** Einfügen von Klauseln an den Anfang
+
+**assertz/1:** wie oben, jedoch wird Klausel an das Ende angehangen
+
+**retract/1:** Literal aus Datenbank löschen
+
+**abolish/1:**
+
+**clause/2:** Heraussuchen bestimmter Klauseln aus der Datenbank, wird häufig zum Programmieren von *Meta-Interpretern* genutzt
+
+## 1.6 Praktisches Programmieren mit Prolog
+
+### 1.6.1 Lösen von Denksportaufgaben
+
+### 1.6.2 Programmierung von Meta-Interpretern
+*Allgemein:* Ein Programm das in der Sprache P geschrieben wurde und beliebige Programme der Sprache P interpretieren (ausführen) kann. In funktionalen und logischen Programmiersprachen ist dies sehr einfach zu realisieren.
+
+*Lemma-Generierung* ist das Hinzufügen bereits bewiesener Literale zum aktuellen Programm.
+
+## 1.7 Neuere Entwicklungen
+
+ - Verbesserung der Negation
+ - Entwicklung paralleler logischer Programmierprachen
+ - Modulkonzepte
+ - Typkonzepte
+ - Integration mit anderen Sprachen
+ 
