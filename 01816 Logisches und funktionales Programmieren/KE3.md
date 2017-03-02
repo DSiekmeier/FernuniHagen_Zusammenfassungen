@@ -49,8 +49,12 @@ Beide Schreibweisen sind semantisch völlig gleichwertig. Überall wo eine Funkt
 ### 2.2.4 Prädikate und bedingte Ausdrücke
 **Prädikate** haben einen boolschen Rückgabewert: <, >, =, <=, >=, or, and, not.
 
-Zur **Fallunterscheidung** dienen die Funktionen *cond* und *if*.
+Zur **Fallunterscheidung** dienen die Funktionen *cond* und *if*. Bei **cond** wird eine Reihe von Prädikaten untersucht, bis eines nicht zu **#f** auswertet. Ist dies bei keinem der Fall ist **cond** undefiniert, außer es existiert ein **else**-Ausdruck.
 
-TODO
+**if** entspricht einem **cond** mit lediglich einer Bedingung und dem **else**-Zweig.
 
-**Zusammenfassung**
+**Makros** (*special forms*) sind Klammerausdrücke die nicht wie üblich ausgewertet werden. Dazu gehören: define, quote, lambda, if, cond, and und or sowie let, set!, delay und cons-stream.
+
+### 2.2.5 Programmstuktur
+
+### 2.2.6 Umgebungen
