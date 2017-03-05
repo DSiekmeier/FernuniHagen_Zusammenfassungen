@@ -58,3 +58,27 @@ Zur **Fallunterscheidung** dienen die Funktionen *cond* und *if*. Bei **cond** w
 ### 2.2.5 Programmstuktur
 
 ### 2.2.6 Umgebungen
+Umgebungen bestimmen den **Sichtbarkeits- und Gültigkeitsbereich** von Variablen. Sichtbarkeitsregeln entsprechen den *Scope*-Regeln wie in Pascal: Deklarationen sind im gesamten direkt umfassenden Block un den inneren Blöcken sichtbar, sofern hier keine Redefinition stattfindet.
+
+Sichtbarkeitsbereiche sind unabhängig von der Aufrufreihenfolge der Funktionen.
+
+**statische Bindung**: Die Sichtbarkeit eines Symbols kann direkt aus dem Quellcode abgelesen werden.
+
+**Grundbegriffe**
+
+**1. Rahmen (*engl. frame*):** Ein Rahmen r ist eine Tabelle von Bindungen, die Symbolen je genau einen Wert zuordnet.
+
+**2. Umgebung (*engl. environment*):** Eine Umgebung U ist eine durch *Verweise* verkette Liste von Rahmen. Schreibweise: U = (r_1, ..., r_n) oder U = (r_1 . U')
+
+**3. Umgebungsspeicher:** Enthält alle Umgebungen, insbesondere die *globale Umgebung*
+
+Zu Beginn existiert lediglich der Rahmen der globalen Umgebung. Neue Rahmen werden bei einem Funktionsaufruf (benutzerdefinierte Funktionen) erzeugt. Der neue Rahmen verweist auf seinen statischen Vorgänger (Definitionsumgebung).
+
+Ein *define* auf Intepreterebene erzeugt zunächst einen Neueintrag in der globalen Umgebung. Lokale Definitionen einer Funktion werden in einem neuen Rahmen an die Parameter gebunden.
+
+### 2.2.7 Abschlussobjekte
+Schlüsselbegriff der funktionalen Programmierung (*engl. closure*).
+
+Bei der Definition eines Funktionsobjekts wird das Bindungspaar **Symbol**, **Lambda-Ausdruck** (Berechnungsanweisung) und ein **Verweis auf Definitionsumgebung** angelegt.
+
+Das Paar **lambda-Ausdruck** und **Umgebung** heißt **Abschlussobjekt**. Die Funktion "merkt sich" in welchen Kontext sie entstanden ist.
