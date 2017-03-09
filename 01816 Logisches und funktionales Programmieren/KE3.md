@@ -82,3 +82,26 @@ Schlüsselbegriff der funktionalen Programmierung (*engl. closure*).
 Bei der Definition eines Funktionsobjekts wird das Bindungspaar **Symbol**, **Lambda-Ausdruck** (Berechnungsanweisung) und ein **Verweis auf Definitionsumgebung** angelegt.
 
 Das Paar **lambda-Ausdruck** und **Umgebung** heißt **Abschlussobjekt**. Die Funktion "merkt sich" in welchen Kontext sie entstanden ist.
+
+### 2.2.8 Auswertungsregeln
+Regeln für die Auswertung eines Ausdrucks e in der Umgebung U:
+
+**1. Konstanten:** > Ist e eine Zahl, Boolscher Wert oder Zeichen(kette) wird e selbst zurückgegeben
+
+**2. Symbole:** > Ist e ein Symbol x wird in der Umgebung U = (r_1 ... r_n) nach der Bindung x:v gesucht und v zurückgegeben. Ist x ungebunden endet die Auswertung mit einem Fehler.
+
+**3. Applikationen:** Ist e=(e_0 ... e_n) werden erst in beliebieger Reihenfolge die e_i ausgewertet was Werte v_i ergibt. v_0 muss n-stellige Funktion sein. TODO
+
+**4. Definitionen:** TODO
+
+**5. lambda-Ausdrücke:** TODO
+
+**6. Sequenzen von Ausdrücken:** TODO
+
+**7. Makros:** Auswertung nach speziellen Regeln der Makros.
+
+- Folgen von Defininitionen werden sequentiell ausgewertet
+- Unproblematisch sind Funktionsdefinitionen in denen erst später definierte Funktionen aufgerufen werden
+- Umgebungen sind Listen, die gemeinsame Vorgänger haben: in einer Umgebung können sich während der Abarbeitung Bindungen ändern aber die Identität der Umgebung wird gewahrt.
+- für rein funktionales Scheme existiert das Subsitutionsmodell für die Ausdrucksauswertung (statt Umgebungsmodell)
+
