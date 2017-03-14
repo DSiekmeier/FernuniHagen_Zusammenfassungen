@@ -105,3 +105,18 @@ Regeln für die Auswertung eines Ausdrucks e in der Umgebung U:
 - Umgebungen sind Listen, die gemeinsame Vorgänger haben: in einer Umgebung können sich während der Abarbeitung Bindungen ändern aber die Identität der Umgebung wird gewahrt.
 - für rein funktionales Scheme existiert das Subsitutionsmodell für die Ausdrucksauswertung (statt Umgebungsmodell)
 
+## 2.3 Funktionale Abstraktion
+Einteilung des Programms in überschaubare Einheiten (Module). Hervorgehoben werden hier die beiden Aspekte
+
+1. Unterscheidung zwischen Funktionsdefinitionen und den Rechenprozessen die sie erzeugen und
+2. Verwendung von Funktionen als Parameter und / oder Ergebnis von Funktionen
+
+### 2.3.1 Rekursive und iterative Prozesse
+- Höchstens ein nicht abgeschlossener Rechenschritt: **linear rekursiver Rechenprozess** (linearer Speicherverbrauch)
+- durch Hinzufügen eines Hilfskonstrukts kann daraus auch ein iterativer Prozess entstehen
+
+> Eine rekursive Funktionsdefinition kann sehr wohl einen iterativen Rechenprozess definieren. **Endständig rekursive Funktionen**
+
+Spezielle Konstrukte wie *while* oder *for* wie in imperativen Sprachen sind in Scheme nicht notwendig.
+
+Erzeugt ein Funktionsaufruf mehr als eine Rekursion spricht man von **baumrekursiven Prozessen** oder **Baumrekursion** (Standard-Beispiel *Fibonacci-Zahlen*). Speicherbedarf ist dann proportional zur Tiefe des Rekursionsbaums. Zeitverbrauch proportional zur Anzahl der Knoten im Baum.
