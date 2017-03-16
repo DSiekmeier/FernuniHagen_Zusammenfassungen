@@ -120,3 +120,23 @@ Einteilung des Programms in überschaubare Einheiten (Module). Hervorgehoben wer
 Spezielle Konstrukte wie *while* oder *for* wie in imperativen Sprachen sind in Scheme nicht notwendig.
 
 Erzeugt ein Funktionsaufruf mehr als eine Rekursion spricht man von **baumrekursiven Prozessen** oder **Baumrekursion** (Standard-Beispiel *Fibonacci-Zahlen*). Speicherbedarf ist dann proportional zur Tiefe des Rekursionsbaums. Zeitverbrauch proportional zur Anzahl der Knoten im Baum.
+
+### 2.3.2 Funktionen höherer Ordnung
+**Funktionen höherer Ordnung** sind Funktionen, die Funktionen als Argumente oder Ergebnisse haben. Komplexe Programme können aus wenigen primitiven Elementen erstellt werden.
+
+### 2.3.3 Funktionen als Parameter von Funktionen
+Beim Aufruf einer Applikation mit Funktionen als Parameter werden diese nicht sofort ausgeführt sondern liefern bei der Ausführung lediglich die an sie gebundenen Objekte als Symbol. **(siehe Abschnitt 2.2.8)**
+
+**let-Makro** dient dem Definieren lokaler Namen mit Einschränkung der Sichtbarkeit auf Teile eines Prozedurrumpfes.
+
+### 2.3.4 Funktionen als Ergebnisse von Funktionen
+Wesentliches Merkmal einer funktionalen Sprache, dass eine **Funktion als Ergebnis einer Applikation** auftreten kann.
+
+In Scheme und Ähnlichem sind Funktionen völlig gleichberechtigt mit anderen Datentypen wie Zahlen, Zeichenketten und so weiter.
+
+Funktionen höherer Ordnung enthalten nicht nur Berechnungsanweisungen sondern auch *Informationen über die zum Zeitpunkt ihrer Entstehung existierenden Parameterbindungen*.
+
+**Sequentielle Dekomposition** für das Lösen komplexer Probleme: Problem eine Funktion zu definieren wird zurückgeführt auf das Definieren zweier einfacherer Funktionen. Ist *f Komposition von g und h* kann f definiert werden durch
+
+	( define ( f x ) ( g ( h( x ) ) )
+	( define ( compose g h ) ( lambda (x) ( g ( h( x ) ) ) ) )
