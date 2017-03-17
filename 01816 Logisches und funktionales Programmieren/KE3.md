@@ -139,4 +139,45 @@ Funktionen höherer Ordnung enthalten nicht nur Berechnungsanweisungen sondern a
 **Sequentielle Dekomposition** für das Lösen komplexer Probleme: Problem eine Funktion zu definieren wird zurückgeführt auf das Definieren zweier einfacherer Funktionen. Ist *f Komposition von g und h* kann f definiert werden durch
 
 	( define ( f x ) ( g ( h( x ) ) )
+
+Abstrahiertes Beispiel: *compose* hat zwei Funktionen als Argumente und gibt eine Funktion als Ergebnis zurück.
+
 	( define ( compose g h ) ( lambda (x) ( g ( h( x ) ) ) ) )
+
+## 2.4 Datenstrukturen und Datenabstraktion
+**cons**: Elementare Funktion zum Erstellen zusammengesetzter Objekte. Die zweikomponentige Datenstruktur wird auch *dotted-pair* genannt.
+	
+	( cons 1 2 ) -> ( 1 . 2 )
+
+Verschachteln mehrerer **cons**-Aufrufe führt zu einer beliebig komplexen Baumstruktur.
+
+	( cons ( cons 1 2 ) 3 ) -> ( ( 1 . 2 ) . 3 )
+
+Im Gegensatz zu **dottet-pairs** haben **Listen** immer eine leere Liste () als rechtes Blatt.
+
+**list** ist die Standardoperation zur Erstellung von Listen fester Länge.
+
+	( cons 1 ( cons 2 ( cons 3  '() ) ) ) == ( list 1 2 3 ) == ( 1 2 3)
+
+Es gibt eine **syntaktische Ähnlichkeit** zwischen Programmen und Daten. Alle Ausdrücke sind zunächst Daten. Programme sind nach zusätzlichen Kriterien aufgebaute Ausdrücke (ähnlich wie bei Prolog). Ähnlichkeit zwischen Daten und Programmen ist charakteristisch für KI-Sprachen.
+
+Funktionen zum **Zugreifen auf Komponenten** einer Liste sind *car* und *cdr*. *car* liefert das erste Element einer Liste. *cdr* liefert wieder eine Liste bestehend aus dem Rest (ohne erstes Element). **null?** dient zum Testen auf leere Listen.
+
+Weitere **Operationen auf Listen**: atom?, number?, symbol?, string?, boolean?
+
+**i-tes Element einer Liste**
+
+	( define ( ith i li )
+		( if ( = i 0 ) ( car li ) ( ith ( - i 1 ) ( cdr li))))
+
+**Längenabfrage**
+
+	( define ( len li )
+		( if ( null? li ) 0 ( + 1 ( len ( cdr li )))))
+
+**Konkatenation**
+
+	( define ( app li r )
+		( if ( null? li ) r ( cons ( car li ) ( app ( cdr li ) r ))))
+
+Keine der Funktionen ändert das Argument. Es wird eine Kopie erzeugt und zurückgegeben. **Nachteil:** großer Speicherbedarf und lange Laufzeiten. **Vorteil:** Sicherheit da es keine Nebeneffekte gibt. Im Hintergrund arbeitet **Garbage Collector**.
