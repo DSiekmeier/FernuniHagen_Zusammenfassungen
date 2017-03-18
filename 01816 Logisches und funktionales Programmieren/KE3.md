@@ -181,3 +181,24 @@ Weitere **Operationen auf Listen**: atom?, number?, symbol?, string?, boolean?
 		( if ( null? li ) r ( cons ( car li ) ( app ( cdr li ) r ))))
 
 Keine der Funktionen ändert das Argument. Es wird eine Kopie erzeugt und zurückgegeben. **Nachteil:** großer Speicherbedarf und lange Laufzeiten. **Vorteil:** Sicherheit da es keine Nebeneffekte gibt. Im Hintergrund arbeitet **Garbage Collector**.
+
+**Bäume / Binärbäume**
+Standardrekursionsstruktur für Programme mit Bäumen ist ein *cond* mit drei Zweigen: *null?* zum Abfangen leerer Listen, *atom?* für Bäume mit nur einem Knoten und *else* in dem mit car und cdr zwei Teilbäume selektiert werden.
+
+**Syntaxbäume**
+sind ein Anwendungfall von *markierten Bäumen* also Bäumen, die auch Informationen in den inneren Blättern führen.
+
+### 2.4.2 Generische Programmpakete
+**Datenabstraktion** ist wesentliches Prinzip für die Entwicklung von flexiblen und zuverlässigen Programmen. Die konkrete Repäsentation von Daten wird verborgen und der Nutzer sieht nur die logischen Operationen darauf. Teilaspekt in Scheme ist das Erstellen *generischer Softwarepakete*. Dabei kommt zum Beispiel das *Überladen* von Operatoren zum Einsatz.
+
+**1- Datengerichtete Prgrammierung**
+Beim Überladen von Operatoren ist eine *Instanz* notwendig die je nach Datentyp festlegt, wie die Funktion ausgefürt werden soll. Möglichkeit: Die Funktion selber übernimmt die ganze Arbeit.
+
+In Scheme müssen auch zur Laufzeit die Datentypen bekannt sein (nicht wie bei kompilierten Sprachen). Möglichkeit: stets Paare aus Datum und Typinformation verwalten.
+
+> Datengerichtete Programmierung ist die logische Fortsetzung dieses Konzepts. Daten werden mit ihren Typen *ettiketiert*.
+
+Ansatz, dass Funktion alles übernimmt ist **nicht** sehr elegant und sicher, da bei neuen Datentypen vieles angepasst werden muss. Besser: Funktionen wie Daten behandeln und in einer Tabelle ablegen. Dabei dreidimensionale, zentrale Tabelle für Operatoren und Typ des Ergebnisses.
+
+**Vorteil:** Es muss nur die Operatortabelle geändert werden und nicht die Funktionen, solange diese die Daten korrekt ettiketieren.
+**Nachteil:** Sicherheit geht zugunsten der Flexibilität verloren, da keine statische Typprüfung erfolgen kann. Viele Kritiker von Scheme halten diesen Nachteil für zu groß. Moderne Sprachen wie Haskell haben Typsicherheit und Flexibilität.
