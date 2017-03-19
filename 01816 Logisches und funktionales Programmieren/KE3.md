@@ -191,7 +191,7 @@ sind ein Anwendungfall von *markierten Bäumen* also Bäumen, die auch Informati
 ### 2.4.2 Generische Programmpakete
 **Datenabstraktion** ist wesentliches Prinzip für die Entwicklung von flexiblen und zuverlässigen Programmen. Die konkrete Repäsentation von Daten wird verborgen und der Nutzer sieht nur die logischen Operationen darauf. Teilaspekt in Scheme ist das Erstellen *generischer Softwarepakete*. Dabei kommt zum Beispiel das *Überladen* von Operatoren zum Einsatz.
 
-**1- Datengerichtete Prgrammierung**
+**1 - Datengerichtete Prgrammierung**
 Beim Überladen von Operatoren ist eine *Instanz* notwendig die je nach Datentyp festlegt, wie die Funktion ausgefürt werden soll. Möglichkeit: Die Funktion selber übernimmt die ganze Arbeit.
 
 In Scheme müssen auch zur Laufzeit die Datentypen bekannt sein (nicht wie bei kompilierten Sprachen). Möglichkeit: stets Paare aus Datum und Typinformation verwalten.
@@ -202,3 +202,8 @@ Ansatz, dass Funktion alles übernimmt ist **nicht** sehr elegant und sicher, da
 
 **Vorteil:** Es muss nur die Operatortabelle geändert werden und nicht die Funktionen, solange diese die Daten korrekt ettiketieren.
 **Nachteil:** Sicherheit geht zugunsten der Flexibilität verloren, da keine statische Typprüfung erfolgen kann. Viele Kritiker von Scheme halten diesen Nachteil für zu groß. Moderne Sprachen wie Haskell haben Typsicherheit und Flexibilität.
+
+**2 - Botschaftenorientierte Programmierung**
+Die Daten übernehmen "aktivere" Rolle" und enthalten Prozeduren die beim Zugriff auf die Daten aktiviert werden. Aktivierung erfolgt durch *Senden einer Nachricht* an das *Datenobjekt*.
+
+Botschaften sind wichtiger Bestandteil der *objektorientierten Programmierung* (vergl. Smalltalk und andere).
