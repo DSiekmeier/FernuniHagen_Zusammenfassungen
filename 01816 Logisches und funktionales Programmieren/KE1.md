@@ -1,9 +1,9 @@
-#1 Logisches Programmieren
-##1.1 Einleitung
+# 1 Logisches Programmieren
+## 1.1 Einleitung
 Prolog basiert auf der Prädikatenlogik 1. Ordnung, konkret der logischen Beschreibung eines Problems in Form von Fakten und Regeln (Klauseln). Aufgrund der Klauseln "berechnet" das Prologsystem die Lösung (Backtracking-Algorithmus).
 
-##1.2 Syntax von Prolog
-###1.2.1 Datentypen
+## 1.2 Syntax von Prolog
+### 1.2.1 Datentypen
 >"Ein Term ist entweder eine Konstante (Zahl oder Atom), eine Variable oder eine Struktur, deren Komponenten wieder Terme sind. Ein Term heißt *Grundterm* wenn er keine Variablen enthält."
 
 **Term**: allgemeine Form von Objekten. Oberbegriff für die restlichen Typen. 
@@ -13,13 +13,13 @@ Prolog basiert auf der Prädikatenlogik 1. Ordnung, konkret der logischen Beschr
 **Variable**: beginnt mit Großbuchstaben 
 **Struktur**: Objekt, zusammengesetzt aus anderen Objekten 
 
-###1.2.2 Operatoren
+### 1.2.2 Operatoren
 Jeder Operator hat eine
 - **Position** (Präfix, Infix, Postfix)
 - **Assoziativität** (links- oder rechtsassoziativ)
 - **Präzedenz / Rangfolge** (Operator mit kl. Präzedenz bildet Unterstruktur)
 
-###1.2.3 Listen
+### 1.2.3 Listen
 Im Gegensatz zu Strukturen sind bei Listen die Anzahl der Elemente im Voraus unbekannt. Eine Liste ist entweder
 
 1. eine leere Liste, dargestellt durch das Atom [ ]
@@ -35,7 +35,7 @@ Listen können in Listenkopf und Listenrest unterteilt werden: [ a | [b, c] ]
 
 *Texte* entsprechen Folgen von Zeichen in Liste: [80, 114, 111, 108, 111, 103]
 
-###1.2.4 Fakten, Regeln und Anfragen
+### 1.2.4 Fakten, Regeln und Anfragen
 Darstellung von Wissen in Prolog in zwei Formen möglich:
 
 1. **Fakten**: Tatsachen über Eigenschaften von Objekten und deren Beziehungen
@@ -53,8 +53,8 @@ Weitere **Begriffe**:
 2. Stelligkeit: Anzahl der anzugebenden Objekte
 3. Klauseln: allgemeiner Oberbegriff für Fakten und Regeln 
 
-##1.3 Beweisstrategie
-###1.3.1 Prinzip der Resolution
+## 1.3 Beweisstrategie
+### 1.3.1 Prinzip der Resolution
 Das **allgemeine Resolutionsprinzip** findet immer eine Lösung wenn sie existiert.
 
 **Modus ponens / Abtrennungsregel:**
@@ -70,7 +70,7 @@ Die Aussage der beiden Regeln ist äquivalent, unterscheidet sich jedoch in der 
 
 Das *allemeine Resolutionsprinzip* berücksichtigt zusätzlich das Ersetzen von Variablen sowie die Tatsache, dass in der Regel eine Menge von Literalen bewiesen werden muss.
 
-###1.3.2 Unifikation
+### 1.3.2 Unifikation
 **Unifikation** ist der Prozess des Ersetzens von Variablen in einem Resolutionsschritt. Gleiche Variablen werden immer durch gleiche Terme ersetzt. Jede Substitution ändert nur eine Variable. Schreibweise \sigma = {N/meier, A/55}
 
 Aus dem **allgemeinsten Unifikator** ist jeder andere Unifikator ableitbar. Es ist wichtig den allgemeinsten Unifikator nicht zu speziell zu wählen um beim allgemeinen Resolutionsprinzip nicht in eine Sackgasse zu laufen.
@@ -82,7 +82,7 @@ Werden zwei Strukturen miteinander unifiziert, werden die Komponenten paarweise 
 
 In der Praxis verzichten viele Prolog-Systeme aus Effizientgründen auf den **Vorkommenstest**.
 
-###1.3.3 Backtracking
+### 1.3.3 Backtracking
 Zu klärende Fragen sind
 
 1. Welches Literal der Anfrage wird im nächsten Beweisschritt genutzt? (Immer in der Reihenfolge in der sie aufgeschrieben wurden, also meist von links nach rechts. Ausnahme sind parallel arbeitende Implementierungen die jedoch nicht weit verbreitet sind.)
@@ -94,8 +94,8 @@ Rein logisch ist die Reihenfolge der Klauseln egal. Da die Beweisstrategie (durc
 
 >Wenn für ein Prädikat mehrere Klauseln existieren, sollten die Spezialfälle *vor* den allgemeinen Fällen stehen.
 
-##1.4 Programmiertechniken
-###1.4.1 Programmieren mit Akkumulatoren
+## 1.4 Programmiertechniken
+### 1.4.1 Programmieren mit Akkumulatoren
 Formulierung rekursiver Prädikate die auf rekursive Termstrukturen arbeiten, in der Art, dass die zu bearbeitende Termstruktur kleiner wird und die Ergebnismenge wächst. Das Problem ist gelöst, wenn die  Ausgangsstruktur vollständig abgebaut ist.
 
 **Beispiel:**
@@ -104,13 +104,13 @@ Formulierung rekursiver Prädikate die auf rekursive Termstrukturen arbeiten, in
 	rev( [ ], A, A ).
 	rev( [H|L], R, A ) :- rev( L, [H|R], A ).
 
-###1.4.2 Suchen nach allen möglichen Lösungen
+### 1.4.2 Suchen nach allen möglichen Lösungen
 
 **Beispiel:**
 
 	loesung( L ) :- potentielleLoesung( L ), korrekteLoesung( L ).
 
-###1.4.3 Musterorientierte Programmierung
+### 1.4.3 Musterorientierte Programmierung
 - Gegenteil zur "Suche nach allen möglichen Lösungen"
 - da es hier meist nur eine Lösung gibt.
 
@@ -120,7 +120,7 @@ Formulierung rekursiver Prädikate die auf rekursive Termstrukturen arbeiten, in
 	sortiert( [E] ).
 	sortiert( [E1, E2|R] ) :- E1 =< E2, sortiert( [E2|R] ).
 
-###1.4.4 Relationale Programmierung
+### 1.4.4 Relationale Programmierung
 Das Prädikat wird als Relation definiert:
 	
 	f( X_1, ..., X_n, Y).
