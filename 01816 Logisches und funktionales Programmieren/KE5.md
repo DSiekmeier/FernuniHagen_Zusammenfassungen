@@ -68,3 +68,25 @@ Berechnungen in CLP erfolgen über
 Terme, Klauseln, Anfragen etc. bleiben gleich. Lediglich der Variablenbegriff wird erweitert.
 
 ### 3.4.2 Unifikation mit Domainvariablen
+Der Begriff der Unifikation wird erweitert: Eine Domainvariable kann nur an ein Element aus *d* gebunden werden oder an eine Domainvariable deren Bereich in *d* enthalten ist.
+
+> Begriffe für den Umgang mit der Unifikation verallgemeinern sich auf Domainvariablen. Auch Existenz eines allgemeinsten Unifikators ist gegeben.
+
+**Algorithmus zur Berechnung des allg. Unifikators mit Domainvariablen**
+Drei Fälle sind zu unterscheiden:
+
+**1. Domainvariable und Konstante:** Konstante muss im Bereich der Domainvariablen liegen
+**2. Domainvariable mit einfacher Variable:** einf. Variable wird mit Domainvariable gebunden
+**3. zwei Domainvariablen:** neue Domainvariable mit Bereich = Durchschnitt der anderen
+
+### 3.4.3 Inferenzregeln
+Prinzip der Resolution kann auf constraint-logische Programmierung übertragen werden. Normale Termunifikation wird durch erweiterte (mit Domainvariablen) ersetzt.
+
+Daneben gibt es spezielle Inferenzregeln.
+
+#### 3.4.3.1 Forward Checking in CLP
+Constraints in denen es nur noch eine nicht-instantiierte Variable gibt, dazu verwendet werden den Bereich der letzten Variablen einzuschränken.
+
+> Ein n-stelliges Constraint p ist **vorwärts-überprüfbar**, falls genau eines der Argumente eine Domainvariable ist und alle anderen Grundterme. Die Domainvariable heißt dann **Vorwärts-Variable**.
+
+**Definition: Forward-Checking-Inferenzregel (FCIR)**
