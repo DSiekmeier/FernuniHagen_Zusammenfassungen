@@ -85,8 +85,36 @@ Prinzip der Resolution kann auf constraint-logische Programmierung übertragen w
 Daneben gibt es spezielle Inferenzregeln.
 
 #### 3.4.3.1 Forward Checking in CLP
-Constraints in denen es nur noch eine nicht-instantiierte Variable gibt, dazu verwendet werden den Bereich der letzten Variablen einzuschränken.
+Constraints in denen es nur noch **eine nicht-instantiierte Variable** gibt, dazu verwendet werden den Bereich der letzten Variablen einzuschränken.
 
 > Ein n-stelliges Constraint p ist **vorwärts-überprüfbar**, falls genau eines der Argumente eine Domainvariable ist und alle anderen Grundterme. Die Domainvariable heißt dann **Vorwärts-Variable**.
 
-**Definition: Forward-Checking-Inferenzregel (FCIR)**
+**Definition: Forward-Checking-Inferenzregel (FCIR)** TODO
+
+#### 3.4.4.2 Looking Ahead in CLP
+Auch anwendbar, wenn es in dem Constraint noch **mehr als eine Variable** gibt. Idee: Aus dem Wertebereich jeder Variablen die Werte entfernen zu denen es keine konsistente Belegung der übrigen Variablen gibt.
+
+**Definition Look Ahead-Regel (LAIR)** TODO
+
+**Vergleich von FCIR und LAIR mit allgemeiner Resolutionsregel**
+
+1. LAIR weniger restriktiv, da es mehr als eine Variable geben darf
+2. Bereiche der Domainvariablen werden eingeschränkt und Var. instantiiert wenn nur noch ein Wert übrig ist
+3. TODO
+
+### 3.4.4 FD-spezifische Prädikate
+Es gibt keinen allgemein akzeptierten Standard. Implementierungen haben oft unterschiedliche **Aufrufmuster**.
+
+#### 3.4.4.1 Spezifikation endlicher Bereiche
+**domain** p( d1, ..., dn ) definiert Domain-Deklaration
+**fd_min( ?X, ?N )** unifiziert für X den minimalen Wert den X aktuell annehmen kann mit N
+**fd_max( ?X, ?N )** wie fd_min
+**fd_size( ?X, ?N )** unifiziert die Kardinalität 
+
+#### 3.4.4.2 Arithmetische Constraints
+
+#### 3.4.4.3 Auswahlprädikate
+
+#### 3.4.4.4 Symbolische Constraints
+
+## 3.5 CLP-Programmiertechniken und Anwendungsbeispiele
