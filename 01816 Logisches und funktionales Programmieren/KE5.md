@@ -118,3 +118,48 @@ Es gibt keinen allgemein akzeptierten Standard. Implementierungen haben oft unte
 #### 3.4.4.4 Symbolische Constraints
 
 ## 3.5 CLP-Programmiertechniken und Anwendungsbeispiele
+### 3.5.1 Forward-Checking
+Forward-Checking kann mit Constraints sehr viel einfacher formuliert werden.
+
+**Standard-Backtracking** hat folgende Nachteile:
+
+1. Wiederholtes Auffinden desselben Sachverhalts
+2. Spätes Auffinden von Fehlern und nuztloses Generieren von Werten
+3. Ungeschickter Rücksetzpunkt
+
+### 3.5.2 Verallgemeinerstes Forward-Checking
+Zugrundeliegendes Schema **constrain-and-generate**.
+
+### 3.5.3 Constrain-and-generate
+Dies ist eine grundlegende CLP-Programmiertechnik. Typische Anwendungsfälle für constraint-logische Programmierung: kombinatorische Probleme, Produktionsplanung, ...
+
+Es gibt zwei Punkte an denen man die Auswahl der Variablen steuern kann:
+
+1. choose_decision_variable
+2. choose_value
+
+### 3.5.4 Das First-Fail-Prinzip
+Geschickte Auswahl von Variablen kann das Forward-Checking oft noch verbessern:
+
+**First-Fail-Prinzip:** Auswahl der Variablen mit dem kleinsten noch möglichen Wertebereich. Bei der also ein Scheitern zuerst zu erwarten ist.
+
+## 3.6 Finite-Domain-Constraints in SICStus-Prolog
+### 3.6.1 Einführung
+Laden der FD-Constraint-Bibliothek mit
+	
+	use_module( library( clpfd) ).
+
+### 3.6.2 FD-spezifische Prädikate
+#### 3.6.2.1 Spezifikation endlicher Bereiche
+#### 3.6.2.2 Arithmetische Constraints
+Relationen die als Constraints benutzt werden sollen bekommen ein # vorangestellt.
+#### 3.6.2.3 Auswahlprädikate
+#### 3.6.2.4 Symbolische Constraints
+
+## 3.7 CLP-Systeme im Überblick
+
+1. CLP(R)
+2. Prolog III
+3.CHIP
+
+# 4 Interation von logischen und funktionalen Programmieren
