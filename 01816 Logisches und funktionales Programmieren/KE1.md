@@ -27,7 +27,7 @@ Im Gegensatz zu Strukturen sind bei Listen die Anzahl der Elemente im Voraus unb
 
 Beispiele für Listen (mit *Listennotation*):
 
-- [ ] entspricht [ ]
+- "[ ]" entspricht [ ]
 - .(x, [ ]) entspricht [x]
 - .(x, .(y, [ ])) entspricht [x, y]
 
@@ -43,7 +43,8 @@ Darstellung von Wissen in Prolog in zwei Formen möglich:
 
 Fakten haben ein Atom als Namen: *eltern*(christine, heinz, angelika).
 
-Regeln haben die Form von "Wenn-Dann"-Aussagen: geschwister(K1, K2) :- eltern(M, V, K1),eltern(M, V, K2). Allgemein: L_0 :- L_1, ..., L_n. Die Aussagen haben dieselbe Form wie Fakten und werden darum zur Unterscheidung **Literale** genannt.
+Regeln haben die Form von "Wenn-Dann"-Aussagen:
+geschwister(K1, K2) :- eltern(M, V, K1),eltern(M, V, K2). Allgemein: L_0 :- L_1, ..., L_n. Die Aussagen haben dieselbe Form wie Fakten und werden darum zur Unterscheidung **Literale** genannt.
 
 >"Fakten können als Regeln ohne Voraussetzungen aufgefasst werden."
 
