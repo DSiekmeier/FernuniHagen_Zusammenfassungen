@@ -241,4 +241,5 @@ Aspekte die eine funktional-logische Programmiersprache auszeichnet:
 Es gibt noch keinen anerkannten Standard für die Symantik aber zwei Ansätze:
 
 **1. Residuation:** Funktionsaufrufe mit nicht vollständig vorliegenden Argumentenwerden so lange verzögern, bis die Aufrufe deterministisch ausgewertet werden können.
+
 **2. Narrowing:**
