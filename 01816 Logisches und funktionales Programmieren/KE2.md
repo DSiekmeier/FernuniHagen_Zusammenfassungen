@@ -33,12 +33,12 @@ In  Prolog existiert das einstellige Prädikat "not" **\\+**, welches als Präfi
 
 Die in Prolog verwendete Negation stimmt nicht mit der zugundeliegenden Logik überein. An einer Lösung wird gearbeitet. Die Idee ist es Negationen solange zu verzögern, bis alle vorkommenden Variablen gebunden sind.
 
-###1.5.3 Zyklische Terme
+### 1.5.3 Zyklische Terme
 Bei der Unifikation muss geprüft werden ob eine Variable als Variable im anderen Term vorkommt (**Vorkommenstest**). Aus Performancegründen wird hierauf oft verzichtet.
 
 Die Bindung einer Variablen an einen Term wird häufig ein Zeiger realisiert der auf den Term zeigt. Ohne Vorkommenstest kann dies dazu führen, dass die Variable X auf einen zyklischen Term zeigt und es können Endlosschleifen entstehen.
 
-###1.5.4 Arithmetik
+### 1.5.4 Arithmetik
 Prolog bietet das zweistellige Infixprädikat **is**. X is Y ist beweisbar, wenn Y ein vollständig instantiierter arithmetischer Term ist und mit X unifizierbar. *2 + 3 is 2 + 3* ist  nicht unifizierbar, da zunächst das zweite Argument ausgerechnet wird und *2 + 3* nicht mit *5* unifizierbar ist.
 
 Gründe, warum **is** nicht rein logisch ist:
