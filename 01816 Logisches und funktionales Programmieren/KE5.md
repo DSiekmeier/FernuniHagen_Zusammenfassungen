@@ -163,3 +163,82 @@ Relationen die als Constraints benutzt werden sollen bekommen ein # vorangestell
 3.CHIP
 
 # 4 Interation von logischen und funktionalen Programmieren
+## 4.1 Motivation
+Wesentliche Merkmale der **logischen Programmierung**
+
+1. logische Variablen
+2. partielle Datenstrukturen
+3. eingebaute Suche
+
+Wesentliche Merkmale der **funktionalen Programmierung**
+
+1. verschachtelte Ausdrücke
+2. Funktionen höherer Ordnung
+3. verzögerte Auswertung (*lazy evaluation*)
+
+Punkte, die für die **Kombination der beiden Paradigmen** sprechen:
+
+1. Funktionen vs. Relationen: Funktionen sind nichts anderes als spezielle Relationen
+2. Elemente höhrere Ornung: Logische Programmiersprachen sind auf Logik erster Stufe beschränkt, ist aber ein mächtiges Konzept bei funkt. Programmierung
+3. Suche und Ablaufsteuerung: Bei log. Programmierung kann bei der Problemlösung auf Suchverfahren zurückgegriffen werden.
+4. Parallele Datenstrukturen: 
+5. Datenfluss: 
+6. Implementierungstechniken:
+7. Programmierkonzepte:
+
+**Essentielle Unterschiede** zwischen den beiden Paradigmen:
+
+1. Logische Variablen und Unifikation in Prolog
+2. Nichtdeterminismus in Prolog
+3. Möglichkeit von Funktionen und Relationen höherer Ordnung
+
+**Ansätze**
+
+1. Einschränkung des Gebrauchs log. Variablen (und somit Suchraums) um funktionales Verhalten zu erreichen
+2. Erweiterung funktionaler Sprachen um logische Variablen
+
+## 4.2 Kombination verschiedener Sprachen
+Statt eine neue Sprache zu erfinden: Ansätze zur Kombination wie *LOGLISP*. Resultat ist sehr mächtig jedoch zwei wichtige Nachteile:
+
+1. Eventuell Konvertierung von Datenstrukturen notwendig
+2. Beide Sprachkonzepte bleiben voneinander getrennt (komplizierte Semantik)
+
+## 4.3 Unifikationn und logische Variablen
+- Einschränkung von logischen Variablen durch Angabe ob Argument im Prädikat Ein- oder Ausgabeposition ist
+- Diese *mode*-Deklaration verhindert jedoch Awendung des Prädikats in "umgekehrter Richtung"
+- Hat zur Auswirkung, dass keine volle Unifikation mehr notwendig ist
+	- *eineitige Unifikation* oder *Pattern Matching* ist ausreichend bei Eingabeparametern
+	- Ausgabeparameter werden an Ausgabevariablen gebunden
+- Entspricht im Wesentlichen der musterorientierten Programmierung in der funkt. Programmierung. Vorteil: mit relationaler Schreibweise können einfach Funktionen mit Tupeln als Ergebnis definiert werden
+
+## 4.4 Funktionales Programmieren und logische Variablen
+Einführung logischer Variablen in die funktionale Programmierung. **Notation von Definitionsgleichungen** mit Parametermustern wie in Haskell. Der Kern einer funktionalen Sprache kann letzendlich immer auf Definitionsgleichungen zurückgeführt werden. Operationale Auswertung erfolgt duch entsprechende **Reduktionsschritte**.
+
+**Eigenschaften von Definitionsgleichungen:**
+
+**1. Konfluenz:**
+**2. Terminierung:**
+
+Für jedes System von Definitionsgleichungen die diese beiden Eigenschaften hat gilt, dass jeder Term *t* zu einem eindeutigen, nicht weiter reduzierbaren Term *t'* (*Normalform von t*) reduziert werden kann.
+
+**Definition Narrowing:** 
+
+Beispiel für Sprache mit Narrowing ist Eqlog. **Nachteil von Narrowing** ist die Komplexität des entstehenden Suchraums.
+
+## 4.5 Funktional-logische Programmierung
+Drei verschiedene Betrachtungsweisen um Paradigmen näher zu bringen:
+
+1. Kombination der Sprachen
+2. Einbringen funktionaler Aspekte in das logische Programmieren
+3. Einbringen von Konzepten der logischen Programmierung in funktionale Sprachen
+
+Aspekte die eine funktional-logische Programmiersprache auszeichnet:
+
+1. Umfasst sowohl (reines) logisches als auch (reines) funktionales Programmieren, bietet also Möglichkeiten von verschachtelten Funktionsausdrücken, Funktionen höherer Ordnun, lazy evaluation, logische Variablen, ...
+2. Bietet effizientere Auswertungsmechanismen als logische Sprachen da funktionale Ausdrücke deterministische ausgewertet werden (*cut*-Operator kann vermieden werden).
+3. *call*-Prädikat zur Simulation von Funktionen höherer Ordnung kann vermieden werden.
+
+Es gibt noch keinen anerkannten Standard für die Symantik aber zwei Ansätze:
+
+**1. Residuation:** Funktionsaufrufe mit nicht vollständig vorliegenden Argumentenwerden so lange verzögern, bis die Aufrufe deterministisch ausgewertet werden können.
+**2. Narrowing:**
