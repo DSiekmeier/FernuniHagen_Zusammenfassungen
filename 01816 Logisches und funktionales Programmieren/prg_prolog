@@ -17,13 +17,12 @@ sortiert( [E] ).
 sortiert( [E1,E2|R] ) :- E1 =< E2, sortiert( [E2|R] ).
 
 % Beispiel: Relationale Programmierung
-ue_append( [ ], L, L ).
-ue_append( [E|R], L, [E|RundL] ) :- ue_append( R, L, RundL ).
+append( [ ], L, L ).
+append( [H|T], L2, [H|L3] ) :- append( T, L2, L3).
 
 % Praedikate mit append
 member(E,L) :- append(L1,[E|L2],L).
 last(L,E) :- append( ,[E],L).
-
 
 % if-then-else mit Cut-Operator
 p :- q, !, r.

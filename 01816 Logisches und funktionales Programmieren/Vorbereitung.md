@@ -24,7 +24,7 @@ Grundlage zum Beweisen ist das allgemeine Resolutionsprinzip anhand dessen ein z
 In der Regel ist eine Anfrage nicht direkt beweisbar, da sie zum Beispiel Variablen enthält. Die Unifikation ist ein Prozess, der eine Substitutionsfunktion für eine Variable berechnet, damit ein Klauselkopf auf die Anfrage passt. Hierzu existiert ein Unifikationsalgorithmus, der den allgemeinsten Unifikator berechnen kann.
 
 **L4) Was ist Backtracking?**
-Allgemein ist Backtracking ein Algorithmus, der ausgehend von Teillösungen eine Gesamtlösung sucht. Führt eine Teillösung in eine Sackgasse so wird eine alternative Lösung ausprobiert, bis keine Alternativen mehr vorhanden sind (Trial-and-Error).
+Allgemein ist Backtracking ein Algorithmus, der ausgehend von Teillösungen eine Gesamtlösung sucht. Führt eine Teillösung in eine Sackgasse so wird eine alternative Lösung ausprobiert, bis keine Alternativen mehr vorhanden sind (Trial-and-Error). In Bezug auf auf Prolog bedeutet dies, dass zunächst versucht wird versucht die einzelnen Literale der Anfrage von links nach rechts zu beweisen um den Klauselkopf beweisen zu können.
 
 **L5) Welche nicht-logischen Komponenten gibt es in Prolog?**
 Das Backtracking-Verfahren, da dies nicht parallel ausgeführt wird, Cut-Operator, Negation \\+, Arithmetik, Ein- und Ausgabe-Funktionen da diese Seiteneffekte haben, ...
@@ -49,10 +49,19 @@ Cut-Operator kann als Fallunterscheidung eingesetzt werden:
 
 > IF q THAN r ELSE s.
 
-**L7) Was ist ein Akkumulator?**
+**L7) Wie funktioniert das Prädikat NOT?**
+Der NOT-Operator gehört zu den nicht-logischen Kompontenten von Prolog. Beim Beweis von \+ X versucht Prolog zunächst X zu beweisen. Ist dies erfolgreich, kann \+ X nicht bewiesen werden.
+
+**L8) Wie lautet eine alternative Implementierung von NOT?**
+Dies kann durch eine Kombination von ! und fail erreicht werden (siehe Fallunterscheidung mit dem Cut-Operator).
+
+	unverheiratet(S) :- verheiratet(S), !, fail.
+	unverheiratet(S).
+
+**L9) Was ist ein Akkumulator?**
 Ein Akkumulator ist ein zusätzliches Argument in einem Prädikat, das dazu dient Zwischenergebnisse zu speichern.
 
-**L8) Welche typischen Programmiertechniken gibt es in Prolog?**7
+**L10) Welche typischen Programmiertechniken gibt es in Prolog?**7
 
 **1. Programmieren mit Akkumulatoren:** Eine Klausel besteht aus mindestens drei Argumenten: eins für die Eingabe, eins als Zwischenergebnis (Akkumulator) und eins als Ergebnis. Das Ergebnis wird schrittweise aufgebaut, während die Eingabe immer kleiner wird. Beispiel ist das Prädikat *reverse/2*.
 
@@ -67,5 +76,8 @@ Ein Akkumulator ist ein zusätzliches Argument in einem Prädikat, das dazu dien
 # Funktionale Programmierung
 **F1) Was ist funktionale Programmierung?**
 In der FP werden Programme aus Funktionen zusammengesetzt. Kennzeichnend sind hier Konzepte wie das Fehlen von Seiteneffekten (Pure Functions) so dass auf innere Zustände eines Berechnungsprozesses verzichtet werden kann und Funktionen höherer Ordnung, also Funktionen die sowohl als Ergebnis als auch als Argument anderer Funktionen auftreten können (Funktionen sind gleichberechtigte Datentypen).
+
+**F2) Was ist ein Abschlussobjekt?**
+Funktionsobjekte tragen neben dem Symbol und der eigentlichen Funktionsbeschreibung auch den Erstellungskontext, also die Information mit sich in welcher Umgebung sie definiert wurden.
 
 # Constraint logische Programmierung
