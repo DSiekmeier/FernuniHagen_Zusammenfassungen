@@ -1,7 +1,0 @@
-% Pruefe ob Element E in Liste vorhanden ist
-ue_member( E, [E|_] ).
-ue_member( E, [_|R] ) :- ue_member( E, R).
-
-% Pruefe ob Element E das letzte in Liste ist
-ue_last( [E], E).
-ue_last( [_|R], E) :- ue_last( R, E ).

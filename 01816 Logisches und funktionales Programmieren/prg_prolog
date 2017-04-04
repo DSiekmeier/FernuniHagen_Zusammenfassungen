@@ -1,0 +1,30 @@
+% Pruefe ob Element E in Liste vorhanden ist
+ue_member( E, [E|_] ).
+ue_member( E, [_|R] ) :- ue_member( E, R).
+
+% Pruefe ob Element E das letzte in Liste ist
+ue_last( [E], E).
+ue_last( [_|R], E) :- ue_last( R, E ).
+
+% Beispiel: Programmieren mit Akkumulator
+reverse( L, A ) :- rev( L, [ ], A ).
+rev( [ ], A, A ).
+rev( [H|L], R, A ) :- rev( L, [H|R], A ).
+
+% Beispiel: Musterorientierte Programmierung
+sortiert( [ ] ).
+sortiert( [E] ).
+sortiert( [E1,E2|R] ) :- E1 =< E2, sortiert( [E2|R] ).
+
+% Beispiel: Relationale Programmierung
+ue_append( [ ], L, L ).
+ue_append( [E|R], L, [E|RundL] ) :- ue_append( R, L, RundL ).
+
+% Praedikate mit append
+member(E,L) :- append(L1,[E|L2],L).
+last(L,E) :- append( ,[E],L).
+
+
+% if-then-else mit Cut-Operator
+p :- q, !, r.
+p :- s.
