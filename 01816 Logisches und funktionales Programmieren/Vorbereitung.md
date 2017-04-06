@@ -90,7 +90,7 @@ Ein Akkumulator ist ein zusätzliches Argument in einem Prädikat, das dazu dien
 In der FP werden Programme aus Funktionen zusammengesetzt, sie sind vollständig auf dem mathematischen Funktionsbegriff aufgebaut. Kennzeichnend sind hier Konzepte wie das Fehlen von Seiteneffekten (Pure Functions) so dass auf innere Zustände eines Berechnungsprozesses verzichtet werden kann und Funktionen höherer Ordnung, also Funktionen die sowohl als Ergebnis als auch als Argument anderer Funktionen auftreten können (Funktionen sind gleichberechtigte Datentypen).
 
 **F2) Was macht die funktionale Programmierung aus?**
-FP basiert auf der mathematischen Definition von Funktionen. Es gibt keine Seiteneffekte und es können insbesondere Funktionen höherer Ordnung genutzt werden. Es werden keine Zustände von Berechnungsprozessen gespeichert.
+FP basiert auf der mathematischen Definition von Funktionen. Es gibt keine Seiteneffekte und es können insbesondere Funktionen höherer Ordnung genutzt werden. Es werden keine Zustände von Berechnungsprozessen gespeichert. Funktionale Sprachen wie LISP / Scheme sind symbolverarbeitende Sprachen.
 
 **F3) Was ist ein Abschlussobjekt?**
 Funktionsobjekte tragen neben dem Symbol und der eigentlichen Funktionsbeschreibung auch den Erstellungskontext, also die Information mit sich in welcher Umgebung sie definiert wurden.

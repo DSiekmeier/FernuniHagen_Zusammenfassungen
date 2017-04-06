@@ -1,0 +1,14 @@
+(define (ith i li)
+  (if (= i 0)
+      (car li)
+      (ith (- i 1) (cdr li))))
+
+(define (len li)
+  (if (null? li)
+      0
+      (+ 1 (len (cdr li)))))
+
+(define (append li r)
+  (if (null? li)
+      r
+      (cons (car li) (append (cdr li) r))))
