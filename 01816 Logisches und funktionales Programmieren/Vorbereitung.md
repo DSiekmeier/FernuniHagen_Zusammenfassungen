@@ -85,6 +85,9 @@ Ein Akkumulator ist ein zusätzliches Argument in einem Prädikat, das dazu dien
 
 **4. Relationale Programmierung:** Da nicht festgelegt ist, welche der Argumente in einer Anfrage mit einem Grundterm belegt ist und welche nicht, kann für eine Funktion auch immer die Umkehrfunktion berechnet werden. Beispiel ist das Prädikat *append/2*, welches auch zum Zerlegen zweier Listen genutzt werden kann.
 
+**L12) Welche Datenbankprädikate gibt es?**
+Datenbankprädikate sind Prädikate, die Programme wie Daten abfragen und verändern können und dabei die Datenbank verändern. Beispiele: consult und reconult, asserta und assertz, retract, abolish, clause.
+
 # Funktionale Programmierung
 **F1) Was ist funktionale Programmierung?**
 In der FP werden Programme aus Funktionen zusammengesetzt, sie sind vollständig auf dem mathematischen Funktionsbegriff aufgebaut. Kennzeichnend sind hier Konzepte wie das Fehlen von Seiteneffekten (Pure Functions) so dass auf innere Zustände eines Berechnungsprozesses verzichtet werden kann und Funktionen höherer Ordnung, also Funktionen die sowohl als Ergebnis als auch als Argument anderer Funktionen auftreten können (Funktionen sind gleichberechtigte Datentypen).
@@ -92,7 +95,21 @@ In der FP werden Programme aus Funktionen zusammengesetzt, sie sind vollständig
 **F2) Was macht die funktionale Programmierung aus?**
 FP basiert auf der mathematischen Definition von Funktionen. Es gibt keine Seiteneffekte und es können insbesondere Funktionen höherer Ordnung genutzt werden. Es werden keine Zustände von Berechnungsprozessen gespeichert. Funktionale Sprachen wie LISP / Scheme sind symbolverarbeitende Sprachen.
 
-**F3) Was ist ein Abschlussobjekt?**
+**F3) Wie werden Symbole ausgwertet?**
+Wenn *x* ein Symbol in der Umgebung U = (r_1, ..., r_n) ist, dann werden die Rahmen nacheinander durchsucht bis eine Bindung *x : v* gefunden wird. In dem Fall wird *x* zu *v* ausgewertet. Falls kein Rahmen gefunden wird, der die Bindung enthält, wird ein Fehler ausgegeben.
+
+**F4) Wie werden Applikationen ausgwertet?**
+Beim Aufruf einer Applikation werden zunächst alle Parameter *e_0* bis *e_n* zu den Werten *v_i* ausgwertet. *v_o* muss ein funktionales Objekt mit formalen Parametern *x_1* bis *x_n*, einem Rumpf *e'* und dem statischen Vorgänger *U'* sein. Es wird ein neuer Rahmen *r* erzeugt, der auf die Vorgängerumgebung zeigt. Im neuen Rahmen *r* werden die Variablenbindungen für die formalen Parameter des Aufrufs hinterlegt.
+
+**F5) Was ist ein Abschlussobjekt?**
 Funktionsobjekte tragen neben dem Symbol und der eigentlichen Funktionsbeschreibung auch den Erstellungskontext, also die Information mit sich in welcher Umgebung sie definiert wurden.
 
 # Constraint logische Programmierung
+**C1) Was sind Constraints?**
+Constraints sind eine Erweiterung der logischen Sprache mit der  Beschränkungen des Wertebereichs von Variablen realisiert werden können. Um dies zu realisieren muss zusätzlich zu Resolution und Unifikation ein Constraint-Solver implementiert werden.
+
+**C2) Welche Inferenzregeln gibt es?**
+
+1. *Forward Checking Inferenzregel (FCIR):* Verwendet Constraints um einzelne, letzte nicht instantiierte Variablen in ihrem Wertebereich einzuschränken.
+
+2. *Lookahead Inferenzregel:* Ist auch bei mehreren nicht instantiierten Variablen anwendbar und streicht aus dem Wertebereich jeder einzelnen Variable die Werte, für die es keine konstistente Belegung der restlichen Variablen gibt.

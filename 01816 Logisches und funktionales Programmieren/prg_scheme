@@ -1,14 +1,22 @@
+; Das i-te Element einer Liste ausgeben
 (define (ith i li)
   (if (= i 0)
       (car li)
       (ith (- i 1) (cdr li))))
 
+; Laenge einer Liste ausgeben
 (define (len li)
   (if (null? li)
       0
       (+ 1 (len (cdr li)))))
 
+; Konkatenieren zweier Listen
 (define (append li r)
   (if (null? li)
       r
       (cons (car li) (append (cdr li) r))))
+
+; Sequentielle Dekomposition
+(define (compose f g)
+  (lambda (x)
+    f(g(x))))

@@ -27,3 +27,10 @@ last(L,E) :- append( ,[E],L).
 % if-then-else mit Cut-Operator
 p :- q, !, r.
 p :- s.
+
+% Beliebiges Praedikat/2 auf zwei fortsetzen
+map(P,[],[]).
+map(P,[E1|R1],[E2|R2]) :-
+  L =.. [P,E1,E2],
+  call(L),
+  map(P,R1,R2).
