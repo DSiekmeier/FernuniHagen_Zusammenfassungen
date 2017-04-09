@@ -102,7 +102,7 @@ Wenn *x* ein Symbol in der Umgebung U = (r_1, ..., r_n) ist, dann werden die Rah
 Beim Aufruf einer Applikation werden zunächst alle Parameter *e_0* bis *e_n* zu den Werten *v_i* ausgwertet. *v_o* muss ein funktionales Objekt mit formalen Parametern *x_1* bis *x_n*, einem Rumpf *e'* und dem statischen Vorgänger *U'* sein. Es wird ein neuer Rahmen *r* erzeugt, der auf die Vorgängerumgebung zeigt. Im neuen Rahmen *r* werden die Variablenbindungen für die formalen Parameter des Aufrufs hinterlegt.
 
 **F5) Was ist ein Abschlussobjekt?**
-Funktionsobjekte tragen neben dem Symbol und der eigentlichen Funktionsbeschreibung auch den Erstellungskontext, also die Information mit sich in welcher Umgebung sie definiert wurden.
+Funktionsobjekte tragen neben dem Symbol und der eigentlichen Funktionsbeschreibung auch den Erstellungskontext, also die Information mit sich in welcher Umgebung sie definiert wurden. Dies ist realisiert durch einen Verweis auf die Definitionsumgebung (Zeiger auf Rahmen).
 
 # Constraint logische Programmierung
 **C1) Was sind Constraints?**
@@ -112,4 +112,4 @@ Constraints sind eine Erweiterung der logischen Sprache mit der  Beschränkungen
 
 1. *Forward Checking Inferenzregel (FCIR):* Verwendet Constraints um einzelne, letzte nicht instantiierte Variablen in ihrem Wertebereich einzuschränken.
 
-2. *Lookahead Inferenzregel:* Ist auch bei mehreren nicht instantiierten Variablen anwendbar und streicht aus dem Wertebereich jeder einzelnen Variable die Werte, für die es keine konstistente Belegung der restlichen Variablen gibt.
+2. *Lookahead Inferenzregel (LAIR):* Ist auch bei mehreren nicht instantiierten Variablen anwendbar und streicht aus dem Wertebereich jeder einzelnen Variable die Werte, für die es keine konstistente Belegung der restlichen Variablen gibt.

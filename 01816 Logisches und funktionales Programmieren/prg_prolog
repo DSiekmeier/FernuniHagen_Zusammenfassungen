@@ -1,22 +1,22 @@
-% Pruefe ob Element E in Liste vorhanden ist
-ue_member( E, [E|_] ).
-ue_member( E, [_|R] ) :- ue_member( E, R ).
+% Pruefe ob Element E in Liste vorhanden ist: member/2
+member( E, [E|_] ).
+member( E, [_|R] ) :- member( E, R ).
 
-% Pruefe ob Element E das Letzte in Liste ist
-ue_last( E, [E] ).
-ue_last( E, [_|R] ) :- ue_last( E, R ).
+% Pruefe ob Element E das Letzte in Liste ist: last/2
+last( E, [E] ).
+last( E, [_|R] ) :- last( E, R ).
 
-% Beispiel: Programmieren mit Akkumulator
+% Beispiel: Programmieren mit Akkumulator: reverse/2
 reverse( L, A ) :- rev( L, [ ], A ).
 rev( [ ], A, A ).
 rev( [H|L], R, A ) :- rev( L, [H|R], A ).
 
-% Beispiel: Musterorientierte Programmierung
+% Beispiel: Musterorientierte : sortiert/1
 sortiert( [ ] ).
 sortiert( [E] ).
 sortiert( [E1,E2|R] ) :- E1 =< E2, sortiert( [E2|R] ).
 
-% Beispiel: Relationale Programmierung
+% Beispiel: Relationale Programmierung: append/3
 append( [ ], L, L ).
 append( [H|T], L2, [H|L3] ) :- append( T, L2, L3).
 
@@ -34,3 +34,7 @@ map(P,[E1|R1],[E2|R2]) :-
   L =.. [P,E1,E2],
   call(L),
   map(P,R1,R2).
+
+% Laenge einer Liste
+length( [], 0 ).
+length( [E|R], N ) :- length( R, NR ), N is NR + 1.
