@@ -34,3 +34,19 @@ Der *modus ponens* benutzt jeweils eine Regel zur Inferenz. Eine *Verkettung von
 
 ### 4.3.1 Regelnetzwerke
 **Regeln sind gerichtet**, das heißt, sie können nur dann feuern wenn ihre Prämisse erfüllt ist. Dies ist ein Unterschied zur klassischen Logik. Möchte man die "Kompatibilität" zur klassichen Logik, kann dies durch zusätzliche Anwendung des **modus tollens** erricht werden.
+
+### 4.3.2 Datengetriebene Inferenz (Vorwärtsverkettung)
+Regeln werden transitiv verknüpft, das bekannte fallspezifische Wissen dient als Ausgangspunkt für Schlussfokgerungen (daher *data-driven*). Konklusionen die aufgrund von erfüllten Prämissen "entstehen" dienen als abgeleitete Fakten und gehen als neues faktisches Wissen in die Wissensbasis ein. Der Algorithmus terminiert wenn keine neuen Fakten abgeleitet werden können.
+
+Die Vorwärtsverkettung ist nützlich im einen Überblick über den Gesamtzustand des Systems zu bekommen.
+
+### 4.3.3 Zielorientierte Inferenz (Rückwärtsverkettung)
+Die Rückwärtsverkettung kann zur Informationsbeschaffung über bestimmte Knoten verwendet werden. Wieder werden Regeln transitiv verknüpft, Ausgangspunkt ist jedoch ein bestimmtes Zielobjekt über das Informationen beschafft werden sollen.
+
+Das Inferenzsystem sucht nach Regeln, die das Zielobjekt als Konklusion haben. Die Objekte der Prämissen werden zu Zwischenzielen. Die Liste von Zielen wird abgebaut bis sie leer ist. Der Algorithmus ist als *BACKCHAIN* rekursiv realisiert.
+
+## 4.4 Das Problem der Widersprüchlichkeit
+Negationen in Fakten oder Konklusionen von Regeln können zu wiedersprüchlichen Aussagen führen.
+
+1. Regelbasis kann klassisch-logisch inkonsistent sein
+2. Regelbasis führt zu widersprüchlichen Aussagen
