@@ -14,3 +14,8 @@ Bei der Modellierung wird häufig wert auf eine *einfache syntaktische Form* gel
 2. Keine Konjunktion (Und-Verknüpfung) in der Konklusion
 
 Dies vergrößert zwar die Anzahl der Regeln macht sie aber einfacher les- und verarbeitbar.
+
+## 4.2 Die Wissensbasis eines regelbasierten Systems
+Die Wissensbasis enthält *Objekte* und deren Beschreibungen mittels einer endlichen Menge diskreter Werte. *Regeln* repräsentieren Zusammenhänge zwischen den Objekten oder Objektmengen.
+
+> Objekte und Regeln bilden das **abstrakte** Wissen der Wissensbasis. Bei Anwendung auf einen konkreten Fall kommt das **fallspezifische** Wissen hinzu (unmittelbare Beobachtungen und abgeleitetes Wissen).
