@@ -50,3 +50,26 @@ Negationen in Fakten oder Konklusionen von Regeln können zu wiedersprüchlichen
 
 1. Regelbasis kann klassisch-logisch inkonsistent sein
 2. Regelbasis führt zu widersprüchlichen Aussagen
+
+## 4.5 Die Erklärungskomponente
+Die Erklärungskomponente dient dazu die Argumentationskette zu erläutern. Dazu werden zum Beispiel die zur Schlussfolgerung genutzten Regeln aufgelistet.
+
+## 4.6 Signalsteuerung im Eisenbahnverkehr durch Regeln
+TODO
+
+## 4.7 MYCIN -- Ein verallgemeinertes regelbasiertes System
+MYCIN beinhaltete bereits Verfahren zur Repräsentation und Verarbeitung *unsicheren Wissens*. Die Wissensrepräsentation erfolgtdurch **Regeln mit Sicherheitsfaktoren** (Zahl zwischen -1 und +1).
+
+Die Inferenzkompontente von MYCIN arbeitet prinzipiell wie ein **rückwärtsverketteter Regelintepreter**. Als Ausgabe erfolgt jedoch nicht nur ob das Zielobjekt wahr oder falsch ist sondern auch ein Faktor für die Sicherheit des Objekts. Dazu werden die Sicherheitsfaktoren in geeigneter Weise miteinander verknüpft.
+
+Die Erklärungskomponente von MYCIN hat ein *Question-Answering-Modul* welches Fragen über Zusammenhänge und die Schlussfolgerung beantwortet und ein *Reasoning status checker* der die aktuelle Argumentationskette transparent macht.
+
+## 4.8 Modularität und Effizienz regelbasierter Systeme
+Man erzielt volle Modularität indem in einem "idealen" System jede Regel als **Wissenseinheit** unabhängig vom Rest der Wissensbasis behandelt wird. Neues Wissen kann so einfach "angehängt" werden.
+
+Das unstrukturierte Wissen kann jedoch zu Effizienz- und Suchproblemen führen, insbesondere da nicht zwangsläufig nur eine Regel sondern *alle* in Frage kommenden Regeln gesucht werden müssen.
+
+Die Suche kann effizienter erfolgen indem Regeln nach Häufigkeit der Anwendung sortiert oder feste Prioritäten bei der Suche gesetzt oder die Regeln in Klassen eingeteilt werden die je nach Fragestellung durchsucht werden.
+
+## 4.9 Ausblick
+TODO
