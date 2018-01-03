@@ -35,3 +35,27 @@ Nachteil: Analyse muss immer wieder gemacht werden
 Beide Ansätze sind durch eine Zwischensprache kombinierbar (vgl. Byte-Code in JAVA): Compiler übersetzt von Quellsprache A in Zielsprache B die von einem Interpreter in die Maschienensprache X für die reale Hardware ausgeführt wird.
 
 Vorteil: Programme sind portable wenn Interpreter für die Zielmaschine existiert, die Ausführung der Zwischensprache B kann auf einer *abstrakten Machine* mit anderen Fähigkeiten wie der realen Hardware passieren (z.B.: Stackmaschine).
+
+## 1.5 Werkzeuge
+Für die Lösung der Teilaufgaben lassen sich präzise Spezifikationen angeben, was das Erstellen und Nutzen von Werkzeugen ermöglicht. Beispielsweise
+
+- Scannergenratoren (z.B.: Lex)
+- Parsergeneratoren (z.B.: YACC)
+- Generatoren für abstrakte Syntaxbäume
+- Generatoren für Attributauswerter
+- Transformation abstrakter Syntaxbäume
+- Generatoren für Codegeneratoren
+
+Scanner und Parser arbeiten in der Regel "Hand in Hand", d.h, der Parser fordert ein Token an und der Scanner liefert es. --> Nicht zwangsläufig sequentiell.
+
+# 2 Lexikalische Analyse
+Die lexikalische Analyse ist die erste Phase mit dem Ziel der Umwandlung des Eingabe-Zeichenstroms in "atomare" Einheiten (**Token**) für den Parser.
+
+Lexikalische Symbole können durch reguläre Ausdrücke oder Zustandsdiagramme (endliche Automaten) dargestellt werden.
+
+**Theoretische Hintergründe**
+
+1. Struktur lexikalischer Symbole kann durch reguläre Ausdrücke beschrieben werden.
+2. Reguläre Sprachen werden durch rechtslineare oder linkslineare Grammatiken erzeugt.
+3. Sie werden durch nichtdeterministische endliche Automaten erkannt.
+4. Zu jedem nichtdeterm. endl. Automaten kann ein deterministischer endlicher Automat konstruiert werden.
