@@ -59,3 +59,41 @@ Lexikalische Symbole können durch reguläre Ausdrücke oder Zustandsdiagramme (
 2. Reguläre Sprachen werden durch rechtslineare oder linkslineare Grammatiken erzeugt.
 3. Sie werden durch nichtdeterministische endliche Automaten erkannt.
 4. Zu jedem nichtdeterm. endl. Automaten kann ein deterministischer endlicher Automat konstruiert werden.
+
+## 2.1 Beschreibung von Token durch reguläre Ausdrücke
+**Begriffe:** Alphabet, Wörter, leeres Wort, Sprache, Konkatenation, Vereinigung, Abschlussoperation
+
+**Vereinfachte Notation von reg. Ausdrücken:**
+
+1. "+": ein- oder mehrfaches Auftreten des vorangegangenen Symbols
+2. "?": optionales Auftreten
+3. "Zeichenklassen [axf9]": einmaliges Auftregen eines der Zeichen
+
+## 2.2 Beschreibung von Token durch Zustandsdiagramme
+Grafische Notation für deterministische endliche Automaten definiert durch die Menge M = (Q, Sigma, delta, s, F)
+
+1. Q: endliche nichtleere Menge von Zuständen
+2. Sigma: Alphabet von Eingabezeichen
+3. delta: Q x Sigma -> Q ist Übergangsfunktion
+4. s Element von Q: Anfangszustand
+5. F Teilmenge von Q: Menge von Endzuständen
+
+In jedem Schritt wird ein Zeichen gelesen und ein neuer Zustand eingenommen, bestimmt durch *delta*. Wenn ein Zustand F erreicht wird, ist die Zeichenfolge akzeptiert.
+
+## 2.3 Direkte Implementierung eines Scanners
+TODO
+
+## 2.4 Implementierung eines Scanners mit Lex
+Lex liest Spezifikation aus einer Datei *lex.l* und generiert das C-Programm *lex.yy.c* welches kompiliert und gegen eine Anwendung gelinkt werden kann. Die Funktion
+    
+    int yylex()
+
+liefert bei jedem Aufruf ein Token. Die Spezifikation besteht aus drei Teilen: Deklarationen, Tokendefinitionen und Aktionen, Hilfsprozeduren.
+
+    Deklarationen
+    %%
+    Tokendefinitionen und Aktionen
+    %%
+    Hilfsprozeduren
+
+Der generierte Analysator akzeptiert bei Mehrdeutigkeit immer ein Token maximaler Länge.
