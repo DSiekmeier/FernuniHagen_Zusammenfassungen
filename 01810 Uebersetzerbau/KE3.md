@@ -22,3 +22,33 @@ Erkennen von Rechtsableitungen in umgekehrter Reihenfolge.
 ### 3.3.2 Operator-Vorranganalyse
 
 Ist das schwächste Bottom-Up-Verfahren (nur recht eingeschränkte Klasse von Grammatiken können verarbeitet werden) und ursprünglich für arithmetische Ausdrücke entwickelt. Kann relativ leicht von Hand implementiert werden.
+
+### 3.3.3 LR-Analyse
+
+Mächtigste Klasse von Shift-Reduce-Parsern.
+
+**Vorteile:**
+
+1. Praktisch alle vorkommenden Konstrukte analysierbar
+2. allgemeinste Shift-Reduce-Technik ohne Backtracking
+3. LR-Parser sind echt mächtiger als LL-Parser
+4. Frühstmögliche Erkennung von Eingabefehlern
+
+**Nachteil** sind die von Hand schwer zu konstruierenden Analysetabellen.
+
+**Konstruktion der Tabellen**
+
+Tabelle ist ein endlicher Automat dessen Kanten mit Grammatiksymbolen beschriftet sind.
+
+**Kanonische LR-Parser**
+
+Kleine Steigerung der Leistungsfähigkeit von LR-Parsern durch Nutzen von LR(1)- statt LR(0)-Elementen, also Betrachtung möglicher Folgezeichen.
+
+**Änderungen zu dem SLR-Verfahren**
+
+TODO
+
+**LALR(1)-Parser**
+
+- Zustände miteinander Verschmelzen, dessen Kerne gleich sind um Komplexität zu verringern
+- LALR(1)-Tabelle bestimmen, ohne dabei die riesige kanonische LR(1)-Kollektion zu bestimmen
