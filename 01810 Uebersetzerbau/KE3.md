@@ -54,6 +54,7 @@ TODO
 - LALR(1)-Tabelle bestimmen, ohne dabei die riesige kanonische LR(1)-Kollektion zu bestimmen
 
 ### 3.3.4 YACC: Ein Parsergenerator
+
 Erzeugt aus einer Grammatikspezifikation einen LALR(1)-Parser. Grundlegendes Vorgehen:
 
 1. YACC-Spezifikation (parser.y) --> y.tab.c
