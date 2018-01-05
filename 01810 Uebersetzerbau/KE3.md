@@ -52,3 +52,18 @@ TODO
 
 - Zustände miteinander Verschmelzen, dessen Kerne gleich sind um Komplexität zu verringern
 - LALR(1)-Tabelle bestimmen, ohne dabei die riesige kanonische LR(1)-Kollektion zu bestimmen
+
+### 3.3.4 YACC: Ein Parsergenerator
+Erzeugt aus einer Grammatikspezifikation einen LALR(1)-Parser. Grundlegendes Vorgehen:
+
+1. YACC-Spezifikation (parser.y) --> y.tab.c
+2. y.tab.c --> a.out
+3. Eingabe --> a.out --> Ausgabe
+
+Die Spezifikation hat folgende Struktur
+
+    Deklarationen
+    %%
+    Grammatik mit semantischen Aktionen
+    %%
+    Hilfsprozeduren
