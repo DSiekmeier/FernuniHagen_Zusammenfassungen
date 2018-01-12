@@ -25,3 +25,9 @@ Syntaxgesteuerte Definitionen, in der nur synthetisierte Attribute vorkommen hei
 **Vererbte Attribute**
 
 Sind nützlich "wenn man an ein Symbol Informationen aus dem Kontext, in dem es auftritt, übertragen will".
+
+## 4.2 L-attributierte Definition, Übersetzungsschema
+
+*Übersetzungsschema* erlaubt es mehr Implementierungsdetails auszudrücken. Eine eingeschränkte Klasse von syntaxgesteuerter Definition ist die *L-attributierte Definition* die sich direkt in ein Übersetzungsschema überführen lässt.
+
+Für Bäume gibt es Standard-Durchlaufarten: Breitendurchlauf und Tiefendurchlauf
