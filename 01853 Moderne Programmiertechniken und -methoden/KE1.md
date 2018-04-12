@@ -14,4 +14,13 @@
 ### 1.2.1 Explizite Interfaceimplementierung
 **Prinzip des interfacebasierten Programmierens**
 - mehrfache Implementierung der gleichen Signatur wenn verschiedene Interfaces einer Klasse dies verlangen
-- Zugriff auf Methoden ausschließlich über Interfacetypen
+- Zugriff auf Methoden ausschließlich über
+
+### 1.2.2 Nominale vs. strukturelle Typkonformität
+- **nominal**: Implementierung wenn die Klasse dies so deklariert
+- **strukturell**: automatische Implementierung aus syntaktischer Gleichheit von Methodendeklaration in Inteface und Klasse
+-- Vorteil: offene Systeme bei denen Systemteile dynamisch nachgeladen werden können
+-- Nachteil: "zufällige" Implementierungen
+
+### 1.2.3 Interfaces vs. abstrakte Klassen
+TODO
