@@ -1,0 +1,17 @@
+# 1 Interfacebasierte Programmierung
+- Kein feststehender Begriff, sondern (vorwiegend) von Microsoft geprägt
+- Unterstützt Polymorphismus und dynamisches Binden, ohne Vererbung
+
+## 1.1 Der Begriff des Interfaces
+- Interfaces sind ein sehr allgemeines Konzept der Informatik
+- Parnassches Modularisierungsansatz: jede Entwurfsentscheidung soll hinter Interfaces in Modulen versteckt werden.
+- Schnittstellenspezifikationen, die durch Access Modifier an Ort und Stelle implementiert werden: **Klasseninterfaces**
+
+## 1.2 Interfaces als Typen
+- Erstmals größere Verbreitung durch Java: Variablen aller Art können mit Interfaces als Typ deklariert werden
+- (schwacher) Grund für die Einführung: Ersatz für fehlende Mehrfachvererbung
+
+### 1.2.1 Explizite Interfaceimplementierung
+**Prinzip des interfacebasierten Programmierens**
+- mehrfache Implementierung der gleichen Signatur wenn verschiedene Interfaces einer Klasse dies verlangen
+- Zugriff auf Methoden ausschließlich über Interfacetypen
