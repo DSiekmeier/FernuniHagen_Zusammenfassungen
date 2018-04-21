@@ -24,3 +24,7 @@
 
 ### 1.2.3 Interfaces vs. abstrakte Klassen
 TODO
+
+## 1.3 Eigenschaften von Interfaces
+### 1.3.1 Aufrufen und aufgerufen werden: die zwei Seiten eines Interfaces
+TODO
