@@ -11,9 +11,19 @@
 - Trend weg von schwergewichtigen Prozessen (wie Wasserfallmodell)
 -Extreme Programming ist ein Zusammenspiel von vielen Konzepten und Techniken (On-Site-Customer, Short Releases, Planning Game, Refactoring, Pair Programming, ...)
 
-## 7.3 Ziele des Extreme Programming
+## 7.2 Ziele des Extreme Programming
 
 - Erstellen von hochqualitativer Software im Zeit- und Kostenrahmen
 - Belange des Programmieres stehen im Vordergrund
 - wenig Rücksicht auf Belange des Managements
 - Erreichung durch *Test-First-Ansatz* und *Programmieren in Paaren*
+
+## 7.4 Der Test-First-Ansatz
+
+- Programmierung und Test oft getrennt voneinander (Programmiert formuliert Tests u.U. unbewusst so, dass kein Fehler augtritt)
+- Beim XP liegt Verantwortung für den Code bei allen, somit insbesondere auch beim Programmierer
+- Problem der "Blindheit" wird gelöst, indem erst Tests formuliert werden und dann die Funktion implementiert wird
+- Hilfreich für Regressionstests
+- Andere können Änderungen schnell testen (*Collective-Code-Ownership*): Regressionstests
+- Funktionstests sind im Vorfeld verpflichtend und ersetzen (z.T.) auch Spezifikationen
+- Kunde ist für die Formulierung der Tests mit verantwortlich
