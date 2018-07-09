@@ -117,3 +117,18 @@
     *10. Anforderungen jenseits Stand der aktuellen Technik:* Explorationsphase zum Projektbeginn
 
     *11. ändernde Basistechnologien:*
+
+## 7.12 Zusammenfassung
+
+1. Prinzip der kleinen Schritte
+2. Prinzip der Einfachheit
+3. Prinzip der gemeinsamen Verantwortunk
+4. Prinzip des sprechenden Codes
+5. Prinzip des Kunden vor Ort
+6. Prinzip keine Überstunden
+7. Prinzip der Rückkopplung
+
+## 7.13 Übergang zu agilen Prozessen
+
+- Prozessmodell des XP ist starr festgelegt, akribisches Befolgen wird als notwendig angesehen
+- moderne agile Prozesse sind weniger dogmatisch
