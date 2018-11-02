@@ -42,4 +42,66 @@ Transformation kann auf viele Arten geschehen: Filtern, Gruppieren, Hinzufügen 
 
 Die **visuelle Abbildung (Mapping)** ist der entscheidende Schritt bei der Informationsvisualisierung. Eine gute visuelle Abbildung ist expressiv (ausdrucksstark) und effektiv. Sie bedient sowohl bewusste als auch unbewusste kognitive Vorgänge. Die Abbildungen sollten möglichst so gewählt werden, dass Verständnis und Wahrnehmung weitestegehend unbewusst abgewickelt werden kann.
 
-## 1.6 Strukturabbildungen
+### 1.5.1 Strukturabbildungen
+
+visuelle Darstellungsachsen:
+
+1. unstrukturierte Achsen
+2. nominale Achsen (Region ist in Unterregionen unterteilt)
+3. ordinale Achsen (auf den Unterregionen ist eine Ordnung definiert)
+4. quantitative Achsen (einer Region ist eine Metrik zugeordnet)
+
+Erhöhung der Informationsmenge durch
+
+1. Komposition
+2. Anordnung
+3. Faltungen
+4. Rekursion
+5. Überladen
+
+### 1.5.2 Attribut-Abbildungen
+
+Zweite wesentliche Komponente bei visuellen Abbildungen: Punkte, Linien, Flächen, Quader, ...
+
+### 1.5.3 Visuelle Skalierbarkeit
+
+Messbarkeit von visueller Skalierbarkeit als mathematische Funktion:
+
+    responses = F(factors, data)
+
+Erkentnisse sind jedoch schwer quantifizierbar, daher Ersatz durch einfache Skalierbarkeitsmetriken:
+
+1. Datenbank-Metriken
+2. Informationsvisualisierungscharakteristika
+
+Relevante Faktoren die die Wahnehmung beeinflussen:
+
+1. menschliche Wahrnehmung
+2. Bildschirmauflösung
+3. visuelle Metaphern
+4. Interaktivität
+5. Datenstrukturen und Verarbeitungsalgorithmen
+6. Recheninfrastuktur
+
+## 1.6 Visuelle Wahnehmung und Kognition
+
+Erweiterung des Referenzmodells der Visualisierung durch **Wahnehmungs- und Kognitionskomponente** sowie **abstrakte Wissenskomponente**.
+
+### 1.6.1 Visuelle Wahnehmung von Bildschirmen und deren Auflösungen
+
+Zwei Basiskonzepte zur Relevanz:
+
+1. visueller Winkel und Abstand zum Bildschirm
+2. Sehschärfe
+
+Gegenstück zu Bildschirmpixel: **vereinfachtes Modell der Gehirnpixel**. Bei circa 6 Grad Sichtwinkel wird die **Sehgrube** (bereich höchster Sehschärfe) genutzt. Kleine und hochauflösende Bildschirme haben die größte visuelle Effizienz.
+
+### 1.6.2 Ein Modell für die visuelle Informationsverarbeitung
+
+1. Phase: Paralleles Extrahieren von einfachen Eingenschaften der visuellen Szene
+2. Phase: Musterwahrnehmung
+3. Phase: Sequentielle und zielgerichtete Verarbeitung
+
+### 1.6.3 Elementare visuelle Wahrnehmung
+
+TODO
