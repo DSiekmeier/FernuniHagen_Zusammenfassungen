@@ -98,10 +98,52 @@ Gegenstück zu Bildschirmpixel: **vereinfachtes Modell der Gehirnpixel**. Bei ci
 
 ### 1.6.2 Ein Modell für die visuelle Informationsverarbeitung
 
-1. Phase: Paralleles Extrahieren von einfachen Eingenschaften der visuellen Szene
-2. Phase: Musterwahrnehmung
-3. Phase: Sequentielle und zielgerichtete Verarbeitung
+1. **Phase:** Paralleles Extrahieren von einfachen Eingenschaften der visuellen Szene
+2. **Phase:** Musterwahrnehmung
+3. **Phase:** Sequentielle und zielgerichtete Verarbeitung
 
 ### 1.6.3 Elementare visuelle Wahrnehmung
+
+Vier Gruppen von Wahrnehmungseigenschaften:
+
+1. assoziative Wahrnehmung 
+2. selektive Wahrnehmung
+3. Wahrnehmung der Anordnung
+4. quantitative Wahrnehmung
+
+- Erste Phase der Informationsverarbeitung wird auch **präattentiv** genannt und geschieht bevor Aufmerksamkeit des Benutzers aktiv auf Details gerichtet wird.
+- ist unabhängig vom Stresslevel der Person
+- visuelle Attribute die präattentiv sind: Form, Farbe, Bewegung räumliche Position in jeweils verschiedenen Ausprägungen
+
+### 1.6.4 Zeitschranken der Ausprägung
+
+- große Änderungen an einer Informationsvisualisierung werden nicht wahrgenommen: **Änderungsblindheit**
+- tritt auf bei zeitglichen, irrelevanten Änderungen
+
+Drei zeitabhängige Stufen der Wahrnehmung:
+
+1. Psychologisches Moment (0,1 Sekunden)
+2. Unvorbereitete Rückmeldung (1 Sekunde)
+3. Aufgabeneinheit (10 Sekunden)
+
+### 1.6.5 Kongnitionsunterstützung und kognitive Verstärkung
+
+**Kognitionsunterstützung:** Unterstützung menschlicher "Denkleistung"
+
+**externe Wahrnehmung:** TODO
+
+**kognitive Kosten:** TODO
+
+## 1.7 Begriff der Informationsvisualisierung
+
+> **Visualisierung** ist der Gebrauch computerunterstützter interaktiver visueller Darstellungen von Daten um Verständnis zu erleichtern.
+
+Im Kurs:
+
+> **Informationsvisualisierung** ist der Gebrauch von computergestützten interaktiven, visuellen Darstellungen von abstrakten Daten, um deren Zugriff Wahrnehmung, Interpretation und Verständnis zu erleichtern.
+
+--> Unterscheidung in Beschaffenheit der Daten: abstrakte Daten haben naturgemäß keine physische Erscheinungsform.
+
+## 1.8 Interaktionen und Interaktionstechniken
 
 TODO
