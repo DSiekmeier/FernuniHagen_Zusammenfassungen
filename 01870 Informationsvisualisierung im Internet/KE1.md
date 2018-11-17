@@ -146,4 +146,102 @@ Im Kurs:
 
 ## 1.8 Interaktionen und Interaktionstechniken
 
-TODO
+- Interaktion ist wichtige Ergänzung in der Informationsvisualisierung
+
+### 1.8.1 Interaktionen
+
+Fenster innerhalb einer Benutzeroberfläche besteht aus Sicht (*view*) und Sammlung von Elementen (*items*). Bestandteile sind durch grundlegende Interaktion miteinander verbunden:
+
+1. **Selektion von Objekten**
+2. **Navigieren von Sichten**
+
+### 1.8.2 Selektionstechniken
+
+- Hervorheben (Selektionsrahmen)
+- Filterung
+- Projektion
+- Dynamic Queries
+- Linsentechnik
+
+### 1.8.3 Navigationstechniken
+
+- Scrolling / Panning
+- geometrisches Zoomen
+- semantisches Zoomen
+- Camera Movement / Rotating
+
+### 1.8.4 Übersicht und Detail
+
+- oft eng verwandt mit der Zooming-Technik
+- Übersicht-und-Detail-Techniken haben immer den Zielkonflikt der Aufteilung der Arbeitsfläche zwischen Übersicht und Detail
+
+### 1.8.5 Fokussierungstechnik
+
+Unterschied zu Navigationstechniken: Überblick über alle Objekte in der Regel noch möglich. Der gesamte Informationsraum wird angezeigt. Drei Prämissen für die Entwicklung von Fokussierungstechniken:
+
+1. Beide Bereiche (Übersicht und Detail) werden dargestellt
+2. Beide Bereiche werden auf derselben dynamischen Sicht dargestellt
+3. Informationen in der Übersicht können von der Detailansicht unterscheiden
+
+Periphere Informationen im Kontext reduzieren durch:
+
+- Filterung oder Projektion
+- Selection aggregation (ähnliche Objekte zusammenfassen)
+- Micro-macro-Readings
+- Highlighting (z.B. Unschärfefokussierung)
+- Distorsionstechniken (geometische Verzerrung)
+- Fisheye-View
+
+### 1.8.6 Interaktionstechniken in multiplen Sichten
+
+2x3-Taxonomie für multiple Sichten:
+
+- Beschreibung der ersten Dimenstion durch Kombination der Grundoperationen von Selektion von Objekten und Navigieren von Sichten
+- zweite Dimension: haben die Sichten die gleichen oder unterschiedliche Daten?
+
+### 1.8.7 Interaktionstechniken innerhalb der Informationsvisualisierung
+
+**Interaktionstechniken für Datentransformationen:**
+
+1. Direct Walk
+2. Details-on-Demand
+3. Attribute Walk
+4. Brushing
+5. Direct Manipulation
+6. Dynamic Queries
+
+**Interaktionstechiken für visuelle Abbildungen:**
+
+1. Data Flow
+2. Pivot Tables
+
+**Interaktionstechniken für Ansichtstransformation:**
+
+1. Direct Selection
+2. Camera Movement
+3. Magic Lens
+4. Overview & Detail
+5. Zooming
+
+### 1.8.8 Interaktionskategorien
+
+Kategorien nach Benutzungsabsicht (nicht vollständig):
+
+1. Auswählen
+2. Erkunden
+3. Neukonfigurieren
+4. Entschlüsseln
+5. Abstrahieren / Konkretisieren
+6. Filtern
+7. Verbinden
+
+## 1.9 Zusammenfassung
+
+**Referenzmodell** besteht im Wesentlichen aus vier Phasen:
+
+1. Exploration der Rohdaten
+2. Übersetzen der relationalen Daten in visuelle Struktur
+3. Ansichtsveränderung
+4. Bereitstellung von Mechanismen um Interaktion zu erlauben
+
+**Systematische Modell- und Methodenauswahl**  ist von großer Bedeutung für die erfolgreiche Infromationsvisualisierung
