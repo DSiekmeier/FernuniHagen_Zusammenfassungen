@@ -51,3 +51,36 @@ Visualisierung ist **effektiv** wenn sie die Möglichkeiten des Ausgabemediums u
 Formale Repräsentation dieser Kritierien durch das Konzept **grafischer Sprachen**, die aus grafischen Sätzen besteht.
 
 Expressivität grafischer Sprachen ist von Syntax und Semantik der Sprache abhängig. Effiktivität ist auch abhängig von visuellen Fähigkeiten der Nutzer --> Nutzen von empirischen Daten aus der Forschung.
+
+### 2.2.3 Funktionsweise des Präsentationswerkzeugs APT (A Presentation Tool)
+
+Vier Arbeitsschritte um aus Tupeln einer relationalen Datenbank eine grafische Repräsentation zu generieren:
+
+1. Partitionierung
+2. Selektion
+3. Komposition
+4. Bildgenerierung
+
+## 2.3 Animation in 3-D-Informationsvisualisierungstechniken
+
+- Expressivität und Effektivität auch auf dreidimensionale Bilder übertragbar, jedoch bei Expressivität völlig neue Möglichkeiten
+- Problem: Informationen im Hintergrund können verdeckt werden (Verstoß geggen Expressivität)
+- Problem: visuelle Darstellung teilweise nicht eindeutig (Größen zu Beispiel Blickpunkt abhängig)
+
+## 2.4 Informationsvisualisierungstechniken für mehr als drei Dimensionen
+
+- geschachteltes 3D
+- Darstellung auf parallelen Achsen
+- hierachische Anordnung von Einflussgrößen
+- farbkodierte Relevanz
+- aus Venn-Diagrammen synthetisierte Polygone
+
+### 2.4.1 Geschachteltes 3D
+
+*n-vision*-3-D-System benötigt spezielle 3D-Hardware: Wahl eines Punkts im Koordinatensystem fixiert zwei Koordinaten und bildet Ursprng eines weiteren (verschachtelten) Koordinatensystems
+
+Interaktion mit dem System erfolgt durch Datenhandschuh, was für ungeübte Nutzer jedoch zu Fehleingaben führen kann.
+
+### 2.4.2 Darstellung der Dimensionen auf parallelen Achsen
+
+Alle Variablenachsen sind parallel und äquidistant. Fokus der Applikation ist Auffinden von Beziehungen zwischen verschiedenen Variablen.
