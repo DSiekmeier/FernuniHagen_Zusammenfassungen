@@ -84,3 +84,24 @@ Interaktion mit dem System erfolgt durch Datenhandschuh, was für ungeübte Nutz
 ### 2.4.2 Darstellung der Dimensionen auf parallelen Achsen
 
 Alle Variablenachsen sind parallel und äquidistant. Fokus der Applikation ist Auffinden von Beziehungen zwischen verschiedenen Variablen.
+
+### 2.4.3 Hierachische Anordnung von Einflussgrößen
+
+TODO
+
+### 2.4.4 Farbkodierte Relevanz hinsichtlich arbiträrer Kriterien
+
+TODO
+
+### 2.4.5 Aus Venn-Diagrammen synthetisierte Polygone
+
+TODO
+
+## 2.5 Informationsvisualisierungstechniken für Baumstrukturen
+
+Zwei grundlegende Arten der Visualisierung von Baumstrukturen / Hierachien:
+
+1. Connection-Methode
+2. Enclosure-Methode
+
+### 2.5.1 Die Connection-Methode
