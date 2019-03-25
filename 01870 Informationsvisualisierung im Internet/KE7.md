@@ -32,4 +32,6 @@ TODO
 
 ## 7.2 Scene Authoring Interface (SAI)
 
-TODO
+- Überarbeitung der Schnittstellenspezifikation im Zuge der Weiterentwicklung von VRML zu X3D
+- Ziele waren: strengere Typisierung und Unterstützung des Dokumentenobjektmodells (DOM)
+- SAI ist integraler Bestandteil aller X3D-Browser
