@@ -171,7 +171,7 @@ Im Kurs:
 
 ## 1.8 Interaktionen und Interaktionstechniken
 
-- Interaktion ist wichtige Ergänzung in der Informationsvisualisierung
+> Interaktion ist ein wichtiges Konzept in der IVIS um dem Anwender einen direktmanupulativen Zugang zu geben, also durch Eingaben die Darstellung zu verändern.
 
 ### 1.8.1 Interaktionen
 
