@@ -1,14 +1,17 @@
 # 2 Informationsvisualisierungstechniken I
 
-- Unterteilung der Techniken in verschiedene Klassen
+TODO
 
 ## 2.1 Visuelle Strukturen in 1-D, 2-D und 3-D
 
+TODO
+
 ### 2.1.1 Eindimensionale Informationsvisualisierungstechniken
 
-- häufig Daten aus Textdokumenten und Zeitlinien
+- Typische Anwendung bei Visualisierung von Daten aus Textdokumenten und Zeitlinien
 - oft in zweidimensionale Informationsvisualisierungstechniken eingebettet
 - Schieberegler, Rollbalken, ...
+- Beispiel: Seesoft, stellt Zeilen von Programmcodes farblich in Linien dar
 
 ### 2.1.2 Zweidimensionale Informationsvisualisierungstechniken
 
@@ -69,15 +72,15 @@ Vier Arbeitsschritte um aus Tupeln einer relationalen Datenbank eine grafische R
 
 ## 2.4 Informationsvisualisierungstechniken für mehr als drei Dimensionen
 
-- geschachteltes 3D
-- Darstellung auf parallelen Achsen
-- hierachische Anordnung von Einflussgrößen
-- farbkodierte Relevanz
-- aus Venn-Diagrammen synthetisierte Polygone
+1. geschachteltes 3D
+2. Darstellung auf parallelen Achsen
+3. hierachische Anordnung von Einflussgrößen
+4. farbkodierte Relevanz
+5. aus Venn-Diagrammen synthetisierte Polygone
 
 ### 2.4.1 Geschachteltes 3D
 
-*n-vision*-3-D-System benötigt spezielle 3D-Hardware: Wahl eines Punkts im Koordinatensystem fixiert zwei Koordinaten und bildet Ursprng eines weiteren (verschachtelten) Koordinatensystems
+*n-vision*-3-D-System benötigt spezielle 3D-Hardware: Wahl eines Punkts im Koordinatensystem fixiert zwei Koordinaten und bildet Ursprung eines weiteren (verschachtelten) Koordinatensystems
 
 Interaktion mit dem System erfolgt durch Datenhandschuh, was für ungeübte Nutzer jedoch zu Fehleingaben führen kann.
 
@@ -105,3 +108,102 @@ Zwei grundlegende Arten der Visualisierung von Baumstrukturen / Hierachien:
 2. Enclosure-Methode
 
 ### 2.5.1 Die Connection-Methode
+
+- Entspricht dem "gängigen" Bild von Baumstrukturen
+- Verwandte Objekte sind miteinander verbunden (im Gegensatz zu Enclosure-Methode wo ein Teilmengenverhältnis visualisiert wird)
+- Problem ist die exponentielle Geschwindigkeit mit der der Baum in der Breite wächst
+
+### 2.5.2 Die Enclosure-Methode
+
+TODO
+
+### 2.5.3 Tree-Maps
+
+TODO
+
+### 2.5.4 SeeSys
+
+TODO
+
+### 2.5.5 TennisViewer
+
+TODO
+
+## 2.6 Informationsvisualisierungstechiken für Netzwerke
+
+- Anwendung zum Beispiel bei Kommunikations oder Verkehrsnetzen
+
+### 2.6.1 Methoden zur Knotenpositionierung bei Netzwerkvisualisierungen
+
+1. Positionierung anhand ihrer Position in der Realität
+2. **Multidimensionale Skalierung (MDS):** Distanz zwischen Knoten ist umgekehrt proportional zu Kantengewicht
+3. **Force-Based:** Knoten werden meist zunächst zufällig positioniert und anschließend mithilfe von "Anziehungskraftbedingungen" in neue Position gebracht
+4. **Spring-Based:** Ähnlich wie "Force-Based" jedoch werden die Kräfte zwischen den Knoten iterativ simuliert --> "Einschwingverhalten"
+
+### 2.6.2 Methoden der Interaktion mit Netzwerkvisualisierungen
+
+TODO
+
+### 2.6.3 Anwendungsbeispiele zur Visualisierung von Netzwerken
+
+**SemNet**
+
+**HierNet**
+
+**SeeNet**
+
+## 2.7 Informationsvisualisierungstechniken für Dynamische Anfragen
+
+**Motivation:** Daten müssen nicht nur visualisiert werden, sondern auch Informationen effizient aus einer großen Menge von Daten extrahiert werden können.
+
+Dies ist zwar mit SQL etc. möglich, jedoch ist hier eine höhere Einarbeitungszeit notwendig.
+
+Neue / unerfahrene Benutzer sollen sich Informationen mithilfe von **visuell-direkmanipulativen** Anfragen erschließen können.
+
+Dynamic Queries ermöglichen jedoch nur eine UND-Verknüpfung der Bedingungen.
+
+### 2.7.2 Das Grundkonzept Dynamischer Anfragen
+
+Merkmale sind
+
+- direktmanipulative Auswahl geeigneter Anfrageparameter
+- keine spezielle, formale Anfragesprache notwendig
+- Ergebnisse werden sofort visualisiert 
+- Enge Kopplung ermöglicht "Echtzeit" (siehe psychologischer Moment)
+- "Output-is-Input"
+
+### 2.7.2 Interaktion mit Dynamischen Anfragen
+
+> Zentrales Konzept hinter Dynamic Queries ist die enge Kopplung zwischen Interaktions- und Informationsvisualisierungskomponente.
+
+Liste der Interaktionstechniken für **Datentransformationen**
+
+1. Direkt Walk
+2. Details-on-Demand
+3. Attribute Walk
+4. Brushing
+5. Direct Manipulation
+6. Dynamic Queries
+
+Liste der Interaktionstechniken für **visuelle Abbildungen**
+
+1. Data Flow
+2. Pivot Tables
+
+Liste der Interaktionstechniken für **Ansichtentransformationen**
+
+1. Direct Selection
+2. Camera Movement
+3. Magic Lens
+4. Overview and Detail
+5. Zooming
+
+### 2.7.3 Dynamic-Query-Anwendungen
+
+TODO
+
+### 2.7.4 Zusammenfassung
+
+- Hervorragende Eignung um große Datenmengen in kurzer Zeit zu untersuchen
+- Dynamic Queries helfen schwierige Anfragen zu stellen
+- Dynamic Queries nutzen die visuelle Wahrnehmungsfähigkeit des Menschen sehr gut aus
