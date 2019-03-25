@@ -1,7 +1,8 @@
 # 1 Motivation und Einführung
 
-**Ziel der Informationsvisualisierung:** Repräsentation abstrakter Daten, so dass
-strukturelle Zusammenhänge und relevante Eigenschaften intuitiv erfasst werden können
+**Ziel der Informationsvisualisierung:**
+
+> Repräsentation abstrakter Daten, so dass strukturelle Zusammenhänge und relevante Eigenschaften intuitiv erfasst werden können.
 
 ## 1.1 Ursprünge und Entwicklung der IV
 
