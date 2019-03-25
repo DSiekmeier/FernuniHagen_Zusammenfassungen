@@ -2,7 +2,7 @@
 
 **Ziel der Informationsvisualisierung:**
 
-> Repräsentation abstrakter Daten, so dass strukturelle Zusammenhänge und relevante Eigenschaften intuitiv erfasst werden können.
+> Repräsentation abstrakter Daten, so dass strukturelle Zusammenhänge und relevante Eigenschaften intuitiv erfasst werden können. Kognitive Prozesse sollen so effektiver unterstützt werden.
 
 ## 1.1 Ursprünge und Entwicklung der IV
 
@@ -10,40 +10,56 @@
 - mit Aufkommen leistungsfähiger 3D-Hardware erste Visualisierungsansätze für abstrakte Daten
 - Ergänzung um Echtzeitanimation und -interaktion
 
+Begriff der IVIS ist nicht auf digitale Medien beschränkt, heute jedoch überwiegend so verwendet.
+
 ## 1.2 Informationsdialoge - Mensch-Maschine-Interaktion mit Inforationssystemen
 
 Informationsmengen am Beispiel eines Suchvorgangs im Internet:
 
 1. Die **Inhaltsmenge** ist die Menge der **Informationsobjekte** (Daten, Dokumente, ...) die das Informationssystem anbieten kann
 2. Die **Interessenmenge** ist diejenige Menge der Informationsobjekte, die geeignet sind um das **Informationsbedürfnis** (um eine Aufgabe zu erfüllen oder ein Problem zu lösen) des Anwenders zu erfüllen
-3. Die **Relevanzmenge R** ist der Schnitt aus Inhaltsmenge (vom System) und Interessenmenge (vom Nutzer)
-4. Durch verschiedene Suchanfragen können meherer **Ergebnismengen** entstehen, die jedoch einen Schnitt zwischen Inhaltsmenge und Relevanzmenge bilden
-5. Die Ergebnismengen überlappen sich in der Praxis nicht vollständig mit der Relevanzmenge, daher wird der Schnitt zwischen allen Ergebnismengen häufig **Kernmenge** genannt
+3. Die **Relevanzmenge R** ist der Schnitt aus Inhaltsmenge (vom System) und Interessenmenge (vom Nutzer). (Alle anderen Elemente sind generell nicht von Interesse.)
+4. Durch verschiedene Suchanfragen (explorativer Charakter) entstehen mehrere **Ergebnismengen**, die einen Schnitt zwischen Inhaltsmenge und Relevanzmenge bilden. (Das heißt, dass System zeigt evtl. mehr Ergebnisse an als interssant sind)
+5. Ergebnismengen überlappen sich in der Praxis nicht vollständig mit Relevanzmenge, daher wird der Schnitt zwischen allen Ergebnismengen häufig **Kernmenge** genannt
+
+> Ziel ist es die Kernmenge auf die komplette Relevanzmenge auszuweiten.
 
 ## 1.3 Modelle zur Informationsvisualisierung
 
-Informationsvisualisierung ist im Wesentlichen ein Abbildungsprozess. Ursprungsdaten werden umgewandelt und auf visuelle Objekte abgebildet.
+Informationsvisualisierung ist im Wesentlichen ein Abbildungsprozess.
 
-Das **Referenzmodell der Informationsvisualisierung** beschreibt den Transformationsprozess konzeptionell.
+Das **Referenzmodell der Informationsvisualisierung** (nach Card et. al., 1999) ist eine konzeptionelle Beschreibung dieses Transformationsprozesses von Rohdaten, über strukturierte Daten, über visuelle Strukturen bis zu Sichten (Abbildungen).
 
-- Rohdatenmenge liegt als Datensatz vor
-- wird im ersten Schritt auf strukturierte Daten reduziert
-- Datenmodell und Datenschema wird mit Visualisierungsmodell und Visualisierunsschema in Verbindung gebracht
-- die entstandenen visuellen Strukturen so transformiert werden, dass Sichten entstehen
+Über die Sichten kann der Anwender interagieren indem er an den verschiedenen Schritten des Prozesses Parameter ändert.
 
-Das Referenzmodell geht davon aus, dass die Rohdaten als relationale, strukturierte Daten vorliegen.
+1. Die **Rohdaten** liegen als Datensatz vor
+2. Erster Schritt: *Datentransformation* um **strukturierte Daten** zu erhalten (nicht immer notwendig, bspw. wenn bereits strukturierte Messdaten vorliegen)
+3. Zweiter Schritt: durch *visuelles Mapping* wird das Datenmodell und Datenschema mit dem Visualisierungsmodell und Visualisierunsschema in Verbindung gebracht. Es entstehen **visuelle Strukturen**.
+4. Dritter Schritt: die entstandenen visuellen Strukturen werden durch eine *Sichtentransformation* in die eigentlichen **Sichten** transformiert
 
-Es existiert ein neueres Modell nach Chi und Riedel, welches die Transformationsschritte klarer definiert und abgrenzt.
+Das **Datenstatusmodell** (nach Chi und Riedel, 1998) ist eine Erweiterung des Referenzmodells mit klarer definierten Transformationsschritten.
 
 ## 1.4 Daten- und Datentransformation
 
-Transformation kann auf viele Arten geschehen: Filtern, Gruppieren, Hinzufügen von Meta-Daten, ...
+Die **Datentransformation** ist der erste Schritt zur IVIS, der jedoch nicht immer notwendig ist (bspw. wenn die Rohdaten bereits in strukturierter Form vorliegen).
+
+Transformation kann auf viele Arten geschehen: Filtern, Gruppieren, Hinzufügen von Meta-Daten, Untermengen bilden, ...
 
 ## 1.5 Visuelle Abbildung
 
-Die **visuelle Abbildung (Mapping)** ist der entscheidende Schritt bei der Informationsvisualisierung. Eine gute visuelle Abbildung ist expressiv (ausdrucksstark) und effektiv. Sie bedient sowohl bewusste als auch unbewusste kognitive Vorgänge. Die Abbildungen sollten möglichst so gewählt werden, dass Verständnis und Wahrnehmung weitestegehend unbewusst abgewickelt werden kann.
+Die **visuelle Abbildung (Mapping)** ist der entscheidende Schritt bei der Informationsvisualisierung. Hier werden grafische Symbole und Eigenschaften hinzugefügt.
+
+> **Visuelle Abbildungen** bilden Daten und deren Strukturen auf eine visuelle Repräsentation ab. Dazu stehen verschiedene visuelle Attibute zur Verfügung.
+
+Eine gute visuelle Abbildung ist **expressiv** (ausdrucksstark) und **effektiv**. Sie bedient sowohl bewusste als auch unbewusste kognitive Vorgänge. Die Abbildungen sollten möglichst so gewählt werden, dass Verständnis und Wahrnehmung weitestegehend unbewusst abgewickelt werden kann.
+
+**Expressiv:** Alle relevanten Daten - und nur diese - werden dargestellt.
+
+**Effektiv:** Visuelle Abbildung nutzt optimal die Möglichkeiten des Ausgabemediums und die visuellen Fähigkeiten des Menschen.
 
 ### 1.5.1 Strukturabbildungen
+
+> Strukturabbildungen als erste wesentliche Komponente von visuellen Abbildungen.
 
 visuelle Darstellungsachsen:
 
@@ -62,7 +78,10 @@ Erhöhung der Informationsmenge durch
 
 ### 1.5.2 Attribut-Abbildungen
 
-Zweite wesentliche Komponente bei visuellen Abbildungen: Punkte, Linien, Flächen, Quader, ...
+> Attributabbildungen als zweite wesentliche Komponente von visuellen Abbildungen.
+
+- Verwendung von visuellen Zeichen, Symbolen und Markierungen
+- Attribute sind bspw. Farbe, Helligkeit, Sättigung, Form, Textur, ...
 
 ### 1.5.3 Visuelle Skalierbarkeit
 
@@ -99,33 +118,36 @@ Gegenstück zu Bildschirmpixel: **vereinfachtes Modell der Gehirnpixel**. Bei ci
 
 ### 1.6.2 Ein Modell für die visuelle Informationsverarbeitung
 
-1. **Phase:** Paralleles Extrahieren von einfachen Eingenschaften der visuellen Szene
-2. **Phase:** Musterwahrnehmung
-3. **Phase:** Sequentielle und zielgerichtete Verarbeitung
+**1. Phase** Paralleles Extrahieren von einfachen Eingenschaften der visuellen Szene: geschieht unbewusst, parallel und sehr schnell. Die Informationen haben transiente Natur.
+
+**2. Phase** Musterwahrnehmung: das visuelle Feld wird in Regionen und einfache Muster zerlegt. Ist langsam und seriell und bezieht Langzeitgedächtnis mit ein.
+
+**3. Phase** Sequentielle und zielgerichtete Verarbeitung
 
 ### 1.6.3 Elementare visuelle Wahrnehmung
 
 Vier Gruppen von Wahrnehmungseigenschaften:
 
-1. assoziative Wahrnehmung 
-2. selektive Wahrnehmung
-3. Wahrnehmung der Anordnung
-4. quantitative Wahrnehmung
+1. assoziative Wahrnehmung (Wie stark wirkt sich die vis. Variable auf di anderen Dimenstionen aus?)
+2. selektive Wahrnehmung (Wie gut grenzt eine vis. Variable ein Element von anderen ab?)
+3. Wahrnehmung der Anordnung (Wie gut ist die Rangordnung der Elemente wahrnehmbar?)
+4. quantitative Wahrnehmung (Wie gut sind Elemente anhand der Menge der Unterschiede unterscheidbar?)
 
 - Erste Phase der Informationsverarbeitung wird auch **präattentiv** genannt und geschieht bevor Aufmerksamkeit des Benutzers aktiv auf Details gerichtet wird.
 - ist unabhängig vom Stresslevel der Person
 - visuelle Attribute die präattentiv sind: Form, Farbe, Bewegung räumliche Position in jeweils verschiedenen Ausprägungen
 
-### 1.6.4 Zeitschranken der Ausprägung
+### 1.6.4 Zeitschranken der Wahrnehmung
 
-- große Änderungen an einer Informationsvisualisierung werden nicht wahrgenommen: **Änderungsblindheit**
-- tritt auf bei zeitglichen, irrelevanten Änderungen
+> **Änderungsblindheit** ist der Effekt, dass große Änderungen an einer IVIS werden nicht wahrgenommen, wenn zeitglich irrelevante Änderungen auftreten, es eine Unterbrechung der Wahrnehmung gab, oder Ähnliches.
 
 Drei zeitabhängige Stufen der Wahrnehmung:
 
-1. Psychologisches Moment (0,1 Sekunden)
-2. Unvorbereitete Rückmeldung (1 Sekunde)
-3. Aufgabeneinheit (10 Sekunden)
+**1. Psychologisches Moment:** (0,1 Sekunden), Reize in dieser Zeitspanne verschmelzen in der Wahnehmung.
+
+**2. Unvorbereitete Rückmeldung:** (1 Sekunde), Maßstab für reibungslose Interaktion mit dem Anwender, wenn dieser nicht darauf vorbereitet ist.
+
+**3. Aufgabeneinheit:** (10 Sekunden), Durchführung von bewusst wahrgenommenen Routineaktionen.
 
 ### 1.6.5 Kongnitionsunterstützung und kognitive Verstärkung
 
@@ -137,13 +159,15 @@ Drei zeitabhängige Stufen der Wahrnehmung:
 
 ## 1.7 Begriff der Informationsvisualisierung
 
-> **Visualisierung** ist der Gebrauch computerunterstützter interaktiver visueller Darstellungen von Daten um Verständnis zu erleichtern.
+> **Visualisierung** ist der Gebrauch von computergestützten, interaktiven visueller Darstellungen von Daten, um deren Verständnis zu erleichtern.
 
 Im Kurs:
 
-> **Informationsvisualisierung** ist der Gebrauch von computergestützten interaktiven, visuellen Darstellungen von abstrakten Daten, um deren Zugriff Wahrnehmung, Interpretation und Verständnis zu erleichtern.
+> **Informationsvisualisierung** ist der Gebrauch von computergestützten, interaktiven visueller Darstellungen von abstrakten Daten, um deren Zugruff, Wahrnehmung, Interpretation und Verständnis zu erleichtern.
 
---> Unterscheidung in Beschaffenheit der Daten: abstrakte Daten haben naturgemäß keine physische Erscheinungsform.
+- Unterschied: abstrakte Daten haben naturgemäß keine physische Erscheinungsform.
+
+> **Wissenschaftliche Visualisierung** bezieht sich auf die Darstellung von physischen Daten, zum Beispiel in Form von Messwerten aus der realen Welt.
 
 ## 1.8 Interaktionen und Interaktionstechniken
 
